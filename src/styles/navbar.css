@@ -11,7 +11,6 @@ html {
 body {
     margin: 0;
     padding: 0;
-    /* background-color: blue; */
 }
 
 /* ================================ */
@@ -24,6 +23,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    z-index: 1000;
 }
 
 .logo_navbar img {
@@ -92,7 +92,6 @@ header {
     background: url('./img/Fond_brouillard.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 h1 {
     color: var(--title-color);
@@ -100,12 +99,17 @@ h1 {
     text-align: center;
     margin: 0;
 }
+h1 img {
+    animation: slidedroite 1s ease-out;
+}
 .header-texte p {
     background-color: rgba(217, 217, 217, 0.85);
     font-size: 1.5rem;
     padding: 10px;
     margin: 0;
-
+}
+.header-texte {
+    animation: slidedroite 1s ease-out;
 }
 .p-un {
     width: 65%;
@@ -118,7 +122,9 @@ h1 {
 .buttonheader {
     background-color: var(--rouge-color);
     border-radius: 25px;
-
+    width: 65%;
+    transition: transform 0.3s ease;
+    animation: slidedroite 1s ease-out;
 }
 .headerlinkboutton {
     color: var(--text-white-color);
@@ -128,6 +134,43 @@ h1 {
     margin-top: 50px;
     padding: 10px;
 }
+.buttonheader:hover {
+    transform: scale(1.1);
+}
+.header-box {
+    display: flex;
+    align-items: center;
+
+}
+.header-gauche {
+    margin-top: 10%;
+}
+.header-droite img{
+    width: 100%;
+    height: 100vh;
+    animation: slidehaut 1s ease-out;
+}
+
+@keyframes slidehaut {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slidedroite {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 /* ======================================== */
 section {
     height: 100vh;
@@ -135,7 +178,11 @@ section {
     background-color: aqua;
 }
 /* ========= RESPONSIVE NAVBAR ========= */
-
+@media screen and (max-width: 1400px) and (min-width: 1024px) {
+    .header-gauche {
+        margin-left: 5%;
+    }
+}
 @media (max-width: 1024px) {
     nav {
         flex-direction: column;
@@ -182,4 +229,41 @@ section {
         border: none;
         color: var(--text-black-color);
     }
+    .header-gauche h1 img {
+        height: 70px;
+    }
+    .header-texte p {
+        font-size: 1rem;
+    }
+    .headerlinkboutton {
+        font-size: 1rem;
+        margin-left: 15px;
+    }
+    .headerlinkboutton img{
+        width: 30px
+    }
+    .buttonheader {
+        width: 100%;
+    }
+    .header-gauche {
+        margin-left: 5%;
+    }
+    .p-un {
+        width: 80%;
+    }
+    .p-deux {
+        width: 100%;
+    }
+}
+@media (max-width: 768px){
+    .header-droite img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+    .header-box {
+        z-index: 2;
+    }
+
 }

@@ -1,7 +1,7 @@
 export const Header = () => {
     return (
         <header>
-            <div>
+            <div className="header-box">
                 <div className="header-gauche">
                 <h1><img src="./img/Logowebsite.png" alt="Gravilight" /></h1>
                 <div className="header-texte"> 
@@ -11,17 +11,15 @@ export const Header = () => {
                 </div>
                 <div className="buttonheader">
                     <a href="#" className="headerlinkboutton">
-                        <div><img src="./img/souris.png" alt="" /></div>
+                        <div style={{ marginRight: '30px' }}><img src="./img/souris.png" alt="" /></div>
                         Et si vous regardiez <br /> plus loin que la pomme ?
                         </a>
                         </div>
                 </div>
-                <div className="header-droite"></div>
+                <div className="header-droite">
+                    <img src="./img/Newton.png" alt="Newton" />
+                </div>
             </div>
         </header>
     );
 }
-
-{/* <h1>
-<img src="./img/Logowebsite.png" alt="Gravilight" />
-</h1> */}
