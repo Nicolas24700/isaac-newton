@@ -86,11 +86,54 @@ nav .active {
     display: none;
 }
 
+/* =========== HEADER ========== */
 header {
     height: 100vh;
     background: url('./img/Fond_brouillard.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+h1 {
+    color: var(--title-color);
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+}
+.header-texte p {
+    background-color: rgba(217, 217, 217, 0.85);
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 0;
 
+}
+.p-un {
+    width: 65%;
+    border-radius: 20px 20px 0 0;
+}
+.p-deux {
+    width: 90%;
+    border-radius: 0 20px 20px 20px;
+}
+.buttonheader {
+    background-color: var(--rouge-color);
+    border-radius: 25px;
+
+}
+.headerlinkboutton {
+    color: var(--text-white-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    margin-top: 50px;
+    padding: 10px;
+}
+/* ======================================== */
+section {
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
+}
 /* ========= RESPONSIVE NAVBAR ========= */
 
 @media (max-width: 1024px) {
