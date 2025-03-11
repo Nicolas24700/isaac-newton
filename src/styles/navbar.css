@@ -172,10 +172,14 @@ h1 img {
     }
 }
 /* ======================================== */
-section {
-    height: 100vh;
+.sectionquinewton {
     width: 100%;
-    background-color: aqua;
+}
+.sectionquinewton img {
+    width: 100%;
+    z-index: 200;
+    bottom: 130px;
+    position: relative;
 }
 /* ========= RESPONSIVE NAVBAR ========= */
 @media screen and (max-width: 1400px) and (min-width: 1024px) {

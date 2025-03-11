@@ -1,8 +1,7 @@
 export const Section = () => {
     return (
-        <section>
-            <h2>Titre de la section</h2>
-            <p>Texte de la section</p>
+        <section className="sectionquinewton">
+            <img src="./img/font_paper.png" alt="" />
         </section>
     );
 }
