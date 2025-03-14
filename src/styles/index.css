@@ -1,7 +1,16 @@
-:root {
-  --grey-transparent-color:rgba(255, 255, 255, 0.4);
-  --text-black-color: #000;
-  --text-white-color: #fff;
-  --title-color: #fff;
-  --rouge-color : #C1121F;
+html {
+  scroll-behavior: smooth;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

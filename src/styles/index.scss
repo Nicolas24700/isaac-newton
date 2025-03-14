@@ -1,0 +1,24 @@
+// Variables
+$text-black-color: #000;
+$rouge-color: #ff0000;
+$text-white-color: #fff;
+$background-nv-color: #FFFDED;
+
+
+
+// Styles
+html {
+    scroll-behavior: smooth;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  

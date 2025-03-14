@@ -1,0 +1,348 @@
+@import 'index';
+
+/* ================================ */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $background-nv-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+
+  .logo_navbar img {
+    height: 40px;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 0 15px;
+
+      a {
+        color: $text-black-color;
+        text-decoration: none;
+        font-size: 1.3rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .active {
+    font-weight: bold;
+  }
+
+  .lang-switch {
+    margin-right: 80px;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      width: 30px;
+      height: auto;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* =========== HEADER ========== */
+header {
+  height: 100vh;
+  background: url("./img/Fond_Header.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    color: $text-black-color;
+    font-size: 6rem;
+    text-align: start;
+    margin: 0;
+    text-transform: uppercase;
+
+    img {
+     top: 1.25rem;
+     position: relative;
+    animation: slidebas 1s ease-out;
+    width: 6rem;
+    }
+    
+  }
+.psoush1 {
+    font-size: 2.8125rem;
+    margin: 0;
+}
+
+  .header-box {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-droite img {
+    width: 100%;
+    height: 100vh;
+    animation: slidehaut 1s ease-out;
+  }
+}
+
+@keyframes slidehaut {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slidebas {
+    0% {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+@keyframes slidedroite {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ======================== SECTION AVEC GIF ======================== */
+.image-gif {
+    position: relative;
+}
+
+.contour-image {
+    display: block;
+    width: 100%;
+}
+
+.inner-video {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+.fond-section-gif {
+  position: absolute;
+  top: 82%;
+  width: 100%;
+  z-index: 2;
+  background: transparent;
+}
+
+.fond-sectionBottom-gif {
+  position: absolute;
+  top: 178%;
+  width: 100%;
+  z-index: 2;
+  background: transparent;
+}
+
+.section-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .container-gif {
+    display: flex;
+    align-items: start;
+    width: 70rem;
+    padding: 20px;
+    z-index: 3;
+
+    .image-gif {
+      flex: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+        z-index: 3;
+        position: relative;
+      }
+    }
+  }
+}
+.text-gif {
+    flex: 2;
+    padding-left: 5rem;
+
+    p {
+      font-size: 1.5rem;
+      color: $text-black-color;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: $text-black-color;
+    }
+  }
+
+/* ========= RESPONSIVE NAVBAR ========= */
+@media screen and (max-width: 1400px) and (min-width: 1024px) {
+  .header-gauche {
+    margin-left: 5%;
+  }
+  header {
+    h1 {
+    font-size: 4rem;
+    img {
+        width: 4.5rem;
+    }
+  }
+    .psoush1 {
+        font-size: 2.5rem;
+    }
+}
+}
+
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+
+    ul {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+
+      li {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+
+    .lang-switch {
+      display: none;
+      margin-right: 0;
+
+      &.show {
+        display: block;
+      }
+
+      img {
+        width: 40px;
+      }
+    }
+
+    ul.show {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      font-size: 1.5rem;
+      background: transparent;
+      border: none;
+      color: $text-black-color;
+    }
+  }
+
+  /*  =========Header ========= */
+
+  header {
+    h1 {
+    font-size: 3rem;
+    img {
+        width: 4rem;
+    }
+  }
+    .psoush1 {
+        font-size: 2rem;
+    }
+}
+  /* ======== Section Gif =============== */
+  .container-gif {
+    padding: 2rem;
+  }
+  .text-gif p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-droite img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .header-box {
+    z-index: 2;
+  }
+
+  /* ==== Section Gif ==== */
+  .fond-section-gif {
+    top: 93%;
+  }
+
+  .fond-sectionBottom-gif {
+    top: 230%;
+  }
+
+  .section-gif {
+    height: auto;
+
+    .container-gif {
+      flex-direction: column;
+      text-align: start;
+      align-items: center;
+
+      .image-gif {
+        max-width: 100%;
+      }
+
+      .text-gif {
+        padding-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}
