@@ -110,6 +110,12 @@ header {
     animation: slidehaut 1s ease-out;
   }
 }
+.planetesdeh1 {
+  width: 9.375rem;
+    position: relative;
+    top: 36px;
+    right: 14%;
+}
 
 @keyframes slidehaut {
   0% {
@@ -217,6 +223,170 @@ header {
     }
   }
 
+  // ============== SECTION 3 =============================
+  
+.section3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  h3 {
+    color: white;
+    z-index: 3;
+    text-transform: uppercase;
+    margin-top: 30%;
+    justify-content: center;
+    display: flex;
+  }
+  p {
+    color: black;
+    z-index: 3;
+    text-align: center;
+    width: 53%;
+    font-size: 1.2rem;
+  }
+}
+.fond-section-expo {
+  position: absolute;
+  top: 199%;
+  width: 100%;
+  z-index: 2;
+  background: transparent;
+}
+
+.allcards {
+  display: flex;
+  z-index: 3;
+}
+
+.cards-horizontale {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards1 {
+  width: 400px;
+  height: 600px;
+  background-color: white;
+  border: 2px solid black;
+
+  img {
+      width: 100%;
+      height: 90%;
+  }
+}
+
+.cards-verticale {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px;
+}
+
+.Cards2,
+.Cards3 {
+  display: flex;
+  width: 600px;
+  height: 275px;
+  background-color: white;
+  margin-bottom: 10px;
+  border: 2px solid black;
+
+  img {
+      width: 90%;
+  }
+}
+
+.cards3-text {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Cards3 {
+  margin-bottom: 0;
+}
+
+.cards1-text {
+  transform: rotate(-180deg);
+  writing-mode: vertical-rl;
+  text-align: center;
+  text-transform: uppercase;
+}
+// ========= RESPONSIVE ========= 
+
+@media (max-width: 1024px) {
+  .section3 {
+      height: auto;
+      h3 {
+        margin-top: 10%;
+      }
+  }
+  .fond-section-expo {
+    height: 260%;
+    top: 184%;
+  }
+
+  .allcards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .cards1-text {
+      font-size: 1rem;
+  }
+
+  .cards1,
+  .Cards2,
+  .Cards3 {
+      height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section3 {
+      height: auto;
+      p {
+        text-align: start;
+    width: 100%;
+      }
+  }
+
+  .allcards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .cards1-text {
+      font-size: 0.8rem;
+  }
+
+  .cards-horizontale,
+  .cards-verticale {
+      min-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .cards1,
+  .Cards2,
+  .Cards3 {
+      width: 100%;
+      height: auto;
+  }
+
+  .cards1 img,
+  .Cards2 img,
+  .Cards3 img {
+      height: auto;
+  }
+}
 /* ========= RESPONSIVE NAVBAR ========= */
 @media screen and (max-width: 1400px) and (min-width: 1024px) {
   .header-gauche {
@@ -232,6 +402,9 @@ header {
     .psoush1 {
         font-size: 2.5rem;
     }
+}
+.planetesdeh1 {
+  width: 6.25rem;
 }
 }
 
@@ -296,6 +469,10 @@ header {
     .psoush1 {
         font-size: 2rem;
     }
+}
+.planetesdeh1 {
+  width: 6.25rem;
+  top: 15px;
 }
   /* ======== Section Gif =============== */
   .container-gif {

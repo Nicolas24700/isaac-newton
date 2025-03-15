@@ -1,4 +1,4 @@
-export const Section = () => {
+export const Sectionwhonewton = () => {
     return (
     <section className="section-gif">
         <img className="fond-section-gif" src="./img/Paper-top.png" alt="" />

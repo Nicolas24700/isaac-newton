@@ -108,6 +108,13 @@ header .header-droite img {
   animation: slidehaut 1s ease-out;
 }
 
+.planetesdeh1 {
+  width: 9.375rem;
+  position: relative;
+  top: 36px;
+  right: 14%;
+}
+
 @keyframes slidehaut {
   0% {
     transform: translateY(100%);
@@ -223,6 +230,9 @@ header .header-droite img {
   header .psoush1 {
     font-size: 2.5rem;
   }
+  .planetesdeh1 {
+    width: 6.25rem;
+  }
 }
 @media (max-width: 1024px) {
   nav {
@@ -273,6 +283,10 @@ header .header-droite img {
   }
   header .psoush1 {
     font-size: 2rem;
+  }
+  .planetesdeh1 {
+    width: 6.25rem;
+    top: 15px;
   }
   /* ======== Section Gif =============== */
   .container-gif {
