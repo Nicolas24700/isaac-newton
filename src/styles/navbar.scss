@@ -261,6 +261,7 @@ header {
 .allcards {
   display: flex;
   z-index: 3;
+  margin-bottom: 15%;
 }
 
 .cards-horizontale {
@@ -320,73 +321,151 @@ header {
   text-align: center;
   text-transform: uppercase;
 }
-// ========= RESPONSIVE ========= 
 
-@media (max-width: 1024px) {
-  .section3 {
-      height: auto;
-      h3 {
-        margin-top: 10%;
-      }
-  }
-  .fond-section-expo {
-    height: 260%;
-    top: 184%;
-  }
-
-  .allcards {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .cards1-text {
-      font-size: 1rem;
-  }
-
-  .cards1,
-  .Cards2,
-  .Cards3 {
-      height: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .section3 {
-      height: auto;
-      p {
-        text-align: start;
+// ============ Affiche Section 4 ===================
+.section4 {
+  background-image: url("../img/fond_carton.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  align-items: flex-end;
+  display: flex;
+  width: 100%;
+  position: relative;
+  top: 13rem;
+  height: 100vh;
+  z-index: 2;
+  justify-content: center;
+  height: auto;
+  
+  > div {
+    display: flex;
+    align-items: center;
     width: 100%;
+    max-width: 1200px;
+
+    .affiche-gauche {
+      flex: 1;
+      img {
+        width: 100%;
+        height: auto;
+        border: 2px solid #000;
       }
-  }
+    }
 
-  .allcards {
-      flex-direction: column;
-      align-items: center;
-  }
+    > div {
+      flex: 2;
+      padding-left: 40px;
 
-  .cards1-text {
-      font-size: 0.8rem;
-  }
+      h4 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: white;
+      }
 
-  .cards-horizontale,
-  .cards-verticale {
-      min-width: 100%;
-      margin-bottom: 20px;
-  }
+      p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: black;
 
-  .cards1,
-  .Cards2,
-  .Cards3 {
-      width: 100%;
-      height: auto;
-  }
+        a {
+          color: black;
+          font-weight: bold;
+          text-decoration: none;
 
-  .cards1 img,
-  .Cards2 img,
-  .Cards3 img {
-      height: auto;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
   }
 }
+// ============ Section Accueil Reservation 4 ===================
+.section-reservation {
+  text-align: center;
+  background: #f4f1e9;
+  padding: 40px;
+  position: relative;
+  top: 143px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  h5 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  }
+
+  .offres-container {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+  }
+
+  .offre {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 28rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .offre-contenu {
+      margin: 15px;
+      background-color: rgba(217, 217, 217, 0.7);
+      border-radius: 16px;
+      padding: 10px;
+
+      h6 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #555;
+      }
+    }
+
+    .btn-reserver {
+      display: block;
+      text-align: center;
+      background: #d32f2f;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      width: 50%;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+      &:hover {
+          transform: scale(1.05);
+        }
+    }
+  }
+
+  .offre-etudiante {
+    background: url("/images/etudiant.jpg") center/cover no-repeat;
+  }
+
+  .offre-famille {
+    background: url("/images/famille.jpg") center/cover no-repeat;
+  }
+}
+
 /* ========= RESPONSIVE NAVBAR ========= */
 @media screen and (max-width: 1400px) and (min-width: 1024px) {
   .header-gauche {
@@ -481,6 +560,57 @@ header {
   .text-gif p {
     font-size: 1rem;
   }
+  .section3 {
+    height: auto;
+    background-color: white;
+    h3 {
+      margin-top: 10%;
+      img {
+          width: 80%;
+      }
+    }
+}
+.fond-section-expo {
+  height: 260%;
+  top: 184%;
+}
+
+.allcards {
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards1-text {
+    font-size: 1rem;
+}
+
+.cards1,
+.Cards2,
+.Cards3 {
+    height: auto;
+}
+// ============ Section Accueil Reservation 4 ===================
+.section-reservation {
+  text-align: center;
+  background: #f4f1e9;
+  padding: 40px;
+  position: relative;
+  top: 143px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  h5 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  }
+
+  .offres-container {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
 }
 
 @media (max-width: 768px) {
@@ -513,7 +643,7 @@ header {
       align-items: center;
 
       .image-gif {
-        max-width: 100%;
+        max-width: 90%;
       }
 
       .text-gif {
@@ -522,4 +652,79 @@ header {
       }
     }
   }
+  .section3 {
+    height: auto;
+    p {
+      text-align: center;
+  width: 100%;
+    }
+}
+
+.allcards {
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards1-text {
+    font-size: 0.8rem;
+    height: 30%; 
+}
+
+.cards-horizontale,
+.cards-verticale {
+    min-width: 100%;
+    margin-bottom: 20px;
+}
+
+.cards-verticale {
+  padding: 0;
+  align-items: center;
+}
+.cards1,
+.Cards2,
+.Cards3 {
+    width: 90%;
+    height: auto;
+}
+
+.cards1 img,
+.Cards2 img,
+.Cards3 img {
+    height: auto;
+}
+.Cards2 img, .Cards3 img {
+  width: 75%;
+}
+.section4 {
+  flex-direction: column;
+  align-items: flex-start;
+
+  > div {
+    flex-direction: column;
+
+    .affiche-gauche {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    > div {
+      padding-left: 0;
+    }
+  }
+}
+// ============ Section Accueil Reservation 4 ===================
+.section-reservation {
+  height: auto;
+ 
+  h5 {
+  font-size: 2rem;
+  }
+  .offre-etudiante {
+    width: 100%;
+  }
+
+  .offre-famille {
+    width: 100%;
+  }
+}
 }
