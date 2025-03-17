@@ -5,6 +5,7 @@ import { Sectionwhonewton } from './components/Sectionwhonewton'
 import {Exposition} from './components/exposition'
 import { Affichesection } from './components/affichesection'
 import {AccueilReservation} from './components/accueil-reservation'
+import { Footer } from './components/footer'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     <Exposition />
     <Affichesection />
     <AccueilReservation />
+    <Footer />
     </>
   )
 }

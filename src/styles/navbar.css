@@ -246,7 +246,7 @@ header .header-droite img {
   position: absolute;
   top: 199%;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   background: transparent;
 }
 
@@ -315,7 +315,6 @@ header .header-droite img {
 
 .section4 {
   background-image: url("../img/fond_carton.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
@@ -323,11 +322,10 @@ header .header-droite img {
   display: flex;
   width: 100%;
   position: relative;
-  top: 13rem;
+  top: 20rem;
   height: 100vh;
   z-index: 2;
   justify-content: center;
-  height: auto;
 }
 .section4 > div {
   display: flex;
@@ -371,12 +369,16 @@ header .header-droite img {
   background: #f4f1e9;
   padding: 40px;
   position: relative;
-  top: 143px;
+  top: 15.625rem;
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background-image: url("../img/fond-last-section.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .section-reservation h5 {
   font-size: 5rem;
@@ -434,10 +436,22 @@ header .header-droite img {
   transform: scale(1.05);
 }
 .section-reservation .offre-etudiante {
-  background: url("/images/etudiant.jpg") center/cover no-repeat;
+  background: url("./img/offre_etudiant.jpg") center/cover no-repeat;
 }
 .section-reservation .offre-famille {
-  background: url("/images/famille.jpg") center/cover no-repeat;
+  background: url("./img/offre_famille.jpg") center/cover no-repeat;
+}
+
+footer {
+  height: 50vh;
+  width: 100%;
+  background-image: url(../img/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 10%;
+  z-index: 4;
+  position: relative;
 }
 
 /* ========= RESPONSIVE NAVBAR ========= */
@@ -545,12 +559,15 @@ header .header-droite img {
   .Cards3 {
     height: auto;
   }
+  .section4 div .affiche-gauche {
+    align-items: center;
+    display: flex;
+  }
   .section-reservation {
     text-align: center;
-    background: #f4f1e9;
     padding: 40px;
     position: relative;
-    top: 143px;
+    top: 15.625rem;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -605,6 +622,10 @@ header .header-droite img {
     text-align: center;
     width: 100%;
   }
+  .fond-section-expo {
+    height: 239%;
+    z-index: 2;
+  }
   .allcards {
     flex-direction: column;
     align-items: center;
@@ -639,12 +660,13 @@ header .header-droite img {
   .section4 {
     flex-direction: column;
     align-items: flex-start;
+    height: auto;
   }
   .section4 > div {
     flex-direction: column;
   }
   .section4 > div .affiche-gauche {
-    width: 100%;
+    width: 50%;
     margin-bottom: 20px;
   }
   .section4 > div > div {

@@ -254,7 +254,7 @@ header {
   position: absolute;
   top: 199%;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   background: transparent;
 }
 
@@ -325,7 +325,6 @@ header {
 // ============ Affiche Section 4 ===================
 .section4 {
   background-image: url("../img/fond_carton.jpg") ;
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
@@ -333,11 +332,10 @@ header {
   display: flex;
   width: 100%;
   position: relative;
-  top: 13rem;
+  top: 20rem;
   height: 100vh;
   z-index: 2;
   justify-content: center;
-  height: auto;
   
   > div {
     display: flex;
@@ -388,12 +386,17 @@ header {
   background: #f4f1e9;
   padding: 40px;
   position: relative;
-  top: 143px;
+  top: 15.625rem;
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background-image: url("../img/fond-last-section.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   h5 {
   font-size: 5rem;
   margin-bottom: 20px;
@@ -458,12 +461,27 @@ header {
   }
 
   .offre-etudiante {
-    background: url("/images/etudiant.jpg") center/cover no-repeat;
+    background: url("./img/offre_etudiant.jpg") center/cover no-repeat;
   }
 
   .offre-famille {
-    background: url("/images/famille.jpg") center/cover no-repeat;
+    background: url("./img/offre_famille.jpg") center/cover no-repeat;
   }
+}
+
+// ===================== FOOTER ======================================================
+footer {
+  height: 50vh;
+  width: 100%;
+  background-image: url(../img/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 40px;
+  z-index: 4;
+  position: relative;
+
+
 }
 
 /* ========= RESPONSIVE NAVBAR ========= */
@@ -589,13 +607,21 @@ header {
 .Cards3 {
     height: auto;
 }
+// ============ Affiche Section 4 ===================
+.section4 {
+  div {
+    .affiche-gauche {
+      align-items: center;
+      display: flex;
+    }
+  }
+}
 // ============ Section Accueil Reservation 4 ===================
 .section-reservation {
   text-align: center;
-  background: #f4f1e9;
   padding: 40px;
   position: relative;
-  top: 143px;
+  top: 15.625rem;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -659,6 +685,10 @@ header {
   width: 100%;
     }
 }
+.fond-section-expo {
+  height: 239%;
+  z-index: 2;
+}
 
 .allcards {
     flex-direction: column;
@@ -698,12 +728,13 @@ header {
 .section4 {
   flex-direction: column;
   align-items: flex-start;
+  height: auto;
 
   > div {
     flex-direction: column;
 
     .affiche-gauche {
-      width: 100%;
+      width: 80%;
       margin-bottom: 20px;
     }
 
