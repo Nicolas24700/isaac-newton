@@ -1,0 +1,761 @@
+@import 'index';
+
+/* ================================ */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $background-nv-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+
+  .logo_navbar img {
+    height: 40px;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 0 15px;
+
+      a {
+        color: $text-black-color;
+        text-decoration: none;
+        font-size: 1.3rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .active {
+    font-weight: bold;
+  }
+
+  .lang-switch {
+    margin-right: 80px;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      width: 30px;
+      height: auto;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* =========== HEADER ========== */
+header {
+  height: 100vh;
+  background: url("./img/Fond_Header.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    color: $text-black-color;
+    font-size: 6rem;
+    text-align: start;
+    margin: 0;
+    text-transform: uppercase;
+
+    img {
+     top: 1.25rem;
+     position: relative;
+    animation: slidebas 1s ease-out;
+    width: 6rem;
+    }
+    
+  }
+.psoush1 {
+    font-size: 2.8125rem;
+    margin: 0;
+}
+
+  .header-box {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-droite img {
+    width: 100%;
+    height: 100vh;
+    animation: slidehaut 1s ease-out;
+  }
+}
+.planetesdeh1 {
+  width: 9.375rem;
+    position: relative;
+    top: 36px;
+    right: 14%;
+}
+
+@keyframes slidehaut {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slidebas {
+    0% {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+@keyframes slidedroite {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ======================== SECTION AVEC GIF ======================== */
+.image-gif {
+    position: relative;
+}
+
+.contour-image {
+    display: block;
+    width: 100%;
+}
+
+.inner-video {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+.fond-section-gif {
+  position: absolute;
+  top: 82%;
+  width: 100%;
+  z-index: 2;
+  background: transparent;
+}
+
+.fond-sectionBottom-gif {
+  position: absolute;
+  top: 178%;
+  width: 100%;
+  z-index: 2;
+  background: transparent;
+}
+
+.section-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .container-gif {
+    display: flex;
+    align-items: start;
+    width: 70rem;
+    padding: 20px;
+    z-index: 3;
+
+    .image-gif {
+      flex: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+        z-index: 3;
+        position: relative;
+      }
+    }
+  }
+}
+.text-gif {
+    flex: 2;
+    padding-left: 5rem;
+
+    p {
+      font-size: 1.5rem;
+      color: $text-black-color;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: $text-black-color;
+    }
+  }
+
+  // ============== SECTION 3 =============================
+  
+.section3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  h3 {
+    color: white;
+    z-index: 3;
+    text-transform: uppercase;
+    margin-top: 30%;
+    justify-content: center;
+    display: flex;
+  }
+  p {
+    color: black;
+    z-index: 3;
+    text-align: center;
+    width: 53%;
+    font-size: 1.2rem;
+  }
+}
+.fond-section-expo {
+  position: absolute;
+  top: 199%;
+  width: 100%;
+  z-index: 3;
+  background: transparent;
+}
+
+.allcards {
+  display: flex;
+  z-index: 3;
+  margin-bottom: 15%;
+}
+
+.cards-horizontale {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards1 {
+  width: 400px;
+  height: 600px;
+  background-color: white;
+  border: 2px solid black;
+
+  img {
+      width: 100%;
+      height: 90%;
+  }
+}
+
+.cards-verticale {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px;
+}
+
+.Cards2,
+.Cards3 {
+  display: flex;
+  width: 600px;
+  height: 275px;
+  background-color: white;
+  margin-bottom: 10px;
+  border: 2px solid black;
+
+  img {
+      width: 90%;
+  }
+}
+
+.cards3-text {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Cards3 {
+  margin-bottom: 0;
+}
+
+.cards1-text {
+  transform: rotate(-180deg);
+  writing-mode: vertical-rl;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+// ============ Affiche Section 4 ===================
+.section4 {
+  background-image: url("../img/fond_carton.jpg") ;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  align-items: flex-end;
+  display: flex;
+  width: 100%;
+  position: relative;
+  top: 20rem;
+  height: 100vh;
+  z-index: 2;
+  justify-content: center;
+  
+  > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+
+    .affiche-gauche {
+      flex: 1;
+      img {
+        width: 100%;
+        height: auto;
+        border: 2px solid #000;
+      }
+    }
+
+    > div {
+      flex: 2;
+      padding-left: 40px;
+
+      h4 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: black;
+
+        a {
+          color: black;
+          font-weight: bold;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+// ============ Section Accueil Reservation 4 ===================
+.section-reservation {
+  text-align: center;
+  background: #f4f1e9;
+  padding: 40px;
+  position: relative;
+  top: 15.625rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../img/fond-last-section.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  h5 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  }
+
+  .offres-container {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+  }
+
+  .offre {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 28rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .offre-contenu {
+      margin: 15px;
+      background-color: rgba(217, 217, 217, 0.7);
+      border-radius: 16px;
+      padding: 10px;
+
+      h6 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #555;
+      }
+    }
+
+    .btn-reserver {
+      display: block;
+      text-align: center;
+      background: #d32f2f;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      width: 50%;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+      &:hover {
+          transform: scale(1.05);
+        }
+    }
+  }
+
+  .offre-etudiante {
+    background: url("./img/offre_etudiant.jpg") center/cover no-repeat;
+  }
+
+  .offre-famille {
+    background: url("./img/offre_famille.jpg") center/cover no-repeat;
+  }
+}
+
+// ===================== FOOTER ======================================================
+footer {
+  height: 50vh;
+  width: 100%;
+  background-image: url(../img/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 40px;
+  z-index: 4;
+  position: relative;
+
+
+}
+
+/* ========= RESPONSIVE NAVBAR ========= */
+@media screen and (max-width: 1400px) and (min-width: 1024px) {
+  .header-gauche {
+    margin-left: 5%;
+  }
+  header {
+    h1 {
+    font-size: 4rem;
+    img {
+        width: 4.5rem;
+    }
+  }
+    .psoush1 {
+        font-size: 2.5rem;
+    }
+}
+.planetesdeh1 {
+  width: 6.25rem;
+}
+}
+
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+
+    ul {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+
+      li {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+
+    .lang-switch {
+      display: none;
+      margin-right: 0;
+
+      &.show {
+        display: block;
+      }
+
+      img {
+        width: 40px;
+      }
+    }
+
+    ul.show {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      font-size: 1.5rem;
+      background: transparent;
+      border: none;
+      color: $text-black-color;
+    }
+  }
+
+  /*  =========Header ========= */
+
+  header {
+    h1 {
+    font-size: 3rem;
+    img {
+        width: 4rem;
+    }
+  }
+    .psoush1 {
+        font-size: 2rem;
+    }
+}
+.planetesdeh1 {
+  width: 6.25rem;
+  top: 15px;
+}
+  /* ======== Section Gif =============== */
+  .container-gif {
+    padding: 2rem;
+  }
+  .text-gif p {
+    font-size: 1rem;
+  }
+  .section3 {
+    height: auto;
+    background-color: white;
+    h3 {
+      margin-top: 10%;
+      img {
+          width: 80%;
+      }
+    }
+}
+.fond-section-expo {
+  height: 260%;
+  top: 184%;
+}
+
+.allcards {
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards1-text {
+    font-size: 1rem;
+}
+
+.cards1,
+.Cards2,
+.Cards3 {
+    height: auto;
+}
+// ============ Affiche Section 4 ===================
+.section4 {
+  div {
+    .affiche-gauche {
+      align-items: center;
+      display: flex;
+    }
+  }
+}
+// ============ Section Accueil Reservation 4 ===================
+.section-reservation {
+  text-align: center;
+  padding: 40px;
+  position: relative;
+  top: 15.625rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  h5 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  }
+
+  .offres-container {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+}
+
+@media (max-width: 768px) {
+  .header-droite img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .header-box {
+    z-index: 2;
+  }
+
+  /* ==== Section Gif ==== */
+  .fond-section-gif {
+    top: 93%;
+  }
+
+  .fond-sectionBottom-gif {
+    top: 230%;
+  }
+
+  .section-gif {
+    height: auto;
+
+    .container-gif {
+      flex-direction: column;
+      text-align: start;
+      align-items: center;
+
+      .image-gif {
+        max-width: 90%;
+      }
+
+      .text-gif {
+        padding-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+  .section3 {
+    height: auto;
+    p {
+      text-align: center;
+  width: 100%;
+    }
+}
+.fond-section-expo {
+  height: 239%;
+  z-index: 2;
+}
+
+.allcards {
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards1-text {
+    font-size: 0.8rem;
+    height: 30%; 
+}
+
+.cards-horizontale,
+.cards-verticale {
+    min-width: 100%;
+    margin-bottom: 20px;
+}
+
+.cards-verticale {
+  padding: 0;
+  align-items: center;
+}
+.cards1,
+.Cards2,
+.Cards3 {
+    width: 90%;
+    height: auto;
+}
+
+.cards1 img,
+.Cards2 img,
+.Cards3 img {
+    height: auto;
+}
+.Cards2 img, .Cards3 img {
+  width: 75%;
+}
+.section4 {
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+
+  > div {
+    flex-direction: column;
+
+    .affiche-gauche {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+
+    > div {
+      padding-left: 0;
+    }
+  }
+}
+// ============ Section Accueil Reservation 4 ===================
+.section-reservation {
+  height: auto;
+ 
+  h5 {
+  font-size: 2rem;
+  }
+  .offre-etudiante {
+    width: 100%;
+  }
+
+  .offre-famille {
+    width: 100%;
+  }
+}
+}
