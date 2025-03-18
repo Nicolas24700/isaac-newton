@@ -1,4 +1,9 @@
-export const Navbar = () => {
+import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+export const Navbar = ({changeLanguage}) => {
+    const location = useLocation();
+    const { t } = useTranslation();
+
     const toggleMenu = () => {
         const navUl = document.querySelector('nav ul');
         const langSwitch = document.querySelector('.lang-switch');
@@ -6,34 +11,29 @@ export const Navbar = () => {
         langSwitch.classList.toggle('show');
     };
 
-
-    // permet de voir si le boutton fonctionne
-    const changeLanguage = (lang) => {
-        alert("Langue changée en : " + lang);
-    };
     return (
         <nav>
             <div className="nav-header">
-                <a href="index.html" className="logo_navbar">
-                    <img src="./img/LogoNavbar.png" alt="Lien vers la page d'accueil" />
+                <a href="/home" className="logo_navbar">
+                    <img src="./img/accueil/LogoNavbar.png" alt="Lien vers la page d'accueil" />
                 </a>
                 <button className="menu-toggle" aria-label="Menu" onClick={toggleMenu}>
                     <i className="fa-solid fa-bars"></i>
                 </button>
             </div>
             <ul>
-                <li><a href="#" className="active">Accueil</a></li>
-                <li><a href="#">Concept</a></li>
-                <li><a href="#">Exposition</a></li>
-                <li><a href="#">Réservation</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/home" className={location.pathname === '/home' ? 'active' : ''}>{t('Accueil')}</a></li>
+                <li><a href="/concept" className={location.pathname === '/concept' ? 'active' : ''}>{t('Concept')}</a></li>
+                <li><a href="#" >{t('Exposition')}</a></li>
+                <li><a href="#">{t('Réservation')}</a></li>
+                <li><a href="#">{t('Contact')}</a></li>
             </ul>
             <div className="lang-switch">
                 <button onClick={() => changeLanguage('fr')}>
-                    <img src="./img/drapeau_france.png" alt="FR" />
+                    <img src="./img/accueil/drapeau_france.png" alt="FR" />
                 </button>
                 <button onClick={() => changeLanguage('en')}>
-                    <img src="./img/drapeau_anglais.png" alt="EN" />
+                    <img src="./img/accueil/drapeau_anglais.png" alt="EN" />
                 </button>
             </div>
         </nav>

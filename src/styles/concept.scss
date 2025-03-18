@@ -1,0 +1,41 @@
+@import 'index';
+.Concept-header {
+    background-color: $text-black-color;
+    padding-top: 5rem;
+    height: 100vh;
+
+}
+.conceptheaderdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15rem 0 15rem;
+    flex-direction: column;
+    h1 {
+        color: $text-white-color;
+        font-size: 4rem;
+        font-weight: 700;
+        align-self: start;
+    }
+    p {
+        color: $text-white-color;
+        font-size: 1.3rem;
+    }
+    a {
+        color: $text-white-color;
+        font-size: 1.3rem;
+        text-decoration: none;
+        font-weight: 700;
+        background-color: $rouge-color;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        &:hover {
+            background-color: $text-white-color;
+            color: $rouge-color;
+            transform: scale(1.1);
+        }
+    }
+}

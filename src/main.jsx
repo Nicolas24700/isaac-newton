@@ -2,8 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/index.scss'
 import App from './App.jsx'
-import './styles/navbar.scss'
+import './styles/home.scss'
 import './styles/test.scss'
+import './styles/concept.scss'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
