@@ -1,13 +1,19 @@
+import { useTranslation } from 'react-i18next';
+
 export const Affichesection = () => {
+        const { t } = useTranslation();
     return (
         <section className="section4">
             <div>
                 <div className="affiche-gauche">
-                    <img src="./img/affiche_newton.png" alt="affiche-gauche" />
+                    <img src="./img/accueil/affiche_newton.png" alt="affiche-gauche" />
                 </div>
                 <div>
-                    <h4>Découvrez Isaac Newton d'une nouvelle manière</h4>
-                    <p>De la célèbre pomme à ses lois fondamentales du mouvement, l'exposition vous offre une immersion     unique dans l'univers de Newton.Ne manquez pas cette occasion exceptionnelle d'apprendre, d'expérimenter et de vivre la science autrement ! <a href="">Réservez dès maintenant</a> votre billet sur notre site et préparez-vous à une aventure scientifique inoubliable. </p>
+                    <h4>{t('h4affiche')}</h4>
+                    <p>
+                    {t('textlinkaffichepart1')} <br /><br />
+                        <a href="/reservation">{t('textlinkaffichemiddle')}</a>{t('textlinkaffichepart2')}
+                    </p>
                 </div>
             </div>
         </section>

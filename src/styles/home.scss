@@ -73,9 +73,9 @@ nav {
 }
 
 /* =========== HEADER ========== */
-header {
+.header-accueil {
   height: 100vh;
-  background: url("./img/Fond_Header.jpg") no-repeat center center/cover;
+  background: url("./img/accueil/Fond_Header.jpg") no-repeat center center/cover;
   display: flex;
   justify-content: center;
 
@@ -230,12 +230,12 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  background-color: $text-black-color;
   padding: 20px;
   width: 100%;
   height: 100vh;
   h3 {
-    color: white;
+    color: $text-white-color;
     z-index: 3;
     text-transform: uppercase;
     margin-top: 30%;
@@ -243,7 +243,7 @@ header {
     display: flex;
   }
   p {
-    color: black;
+    color: $text-black-color;
     z-index: 3;
     text-align: center;
     width: 53%;
@@ -274,8 +274,8 @@ header {
 .cards1 {
   width: 400px;
   height: 600px;
-  background-color: white;
-  border: 2px solid black;
+  background-color: $text-white-color;
+  border: 2px solid $text-black-color;
 
   img {
       width: 100%;
@@ -297,9 +297,9 @@ header {
   display: flex;
   width: 600px;
   height: 275px;
-  background-color: white;
+  background-color: $text-white-color;
   margin-bottom: 10px;
-  border: 2px solid black;
+  border: 2px solid $text-black-color;
 
   img {
       width: 90%;
@@ -324,7 +324,7 @@ header {
 
 // ============ Affiche Section 4 ===================
 .section4 {
-  background-image: url("../img/fond_carton.jpg") ;
+  background-image: url("../img/accueil/fond_carton.jpg") ;
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
@@ -359,16 +359,16 @@ header {
       h4 {
         font-size: 2rem;
         margin-bottom: 10px;
-        color: white;
+        color: $text-white-color;
       }
 
       p {
         font-size: 1.5rem;
         line-height: 1.5;
-        color: black;
+        color: $text-black-color;
 
         a {
-          color: black;
+          color: $text-black-color;
           font-weight: bold;
           text-decoration: none;
 
@@ -392,7 +392,7 @@ header {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-image: url("../img/fond-last-section.jpg");
+  background-image: url("../img/accueil/fond-last-section.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -409,7 +409,7 @@ header {
   }
 
   .offre {
-    background: white;
+    background: $text-white-color;
     border-radius: 16px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -446,7 +446,7 @@ header {
       display: block;
       text-align: center;
       background: #d32f2f;
-      color: white;
+      color: $text-white-color;
       padding: 10px;
       border-radius: 8px;
       text-decoration: none;
@@ -461,35 +461,102 @@ header {
   }
 
   .offre-etudiante {
-    background: url("./img/offre_etudiant.jpg") center/cover no-repeat;
+    background: url("./img/accueil/offre_etudiant.jpg") center/cover no-repeat;
   }
 
   .offre-famille {
-    background: url("./img/offre_famille.jpg") center/cover no-repeat;
+    background: url("./img/accueil/offre_famille.jpg") center/cover no-repeat;
+  }
+  .doigt-gauche {
+    position: absolute;
+    left: 0%;
+    top: 71%;
+    z-index: 20;
+  }
+  .doigt-droite {
+    position: absolute;
+    right: 0%;
+    top: 60%;
+    z-index: 20;
   }
 }
 
 // ===================== FOOTER ======================================================
-footer {
+.footer {
   height: 50vh;
   width: 100%;
-  background-image: url(../img/footer.png);
+  background-image: url(../img/accueil/footer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-top: 40px;
   z-index: 4;
   position: relative;
-
-
+  top: 15rem;
 }
+.HDP {
+  display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    img {
+      transition: all 0.3s ease;
+      background-color: $text-white-color;
+      &:hover {
+        transform: scale(1.1);
+    }
+    }
+}
+.container {
+  display: flex;
+  color: $text-white-color;
+  padding: 20px 13rem 20px 40px;
+  gap: 10rem;
+  width: 100%;
+  position: relative;
+  top: 12.5rem;
+
+  .mention {
+      flex: 1;
+  }
+  a {
+    color: $text-white-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+  .right-section {
+      display: flex;
+      gap: 40px;
+      flex: 3;
+      justify-content: flex-end;
+
+      div {
+          text-align: left;
+      }
+  }
+
+  .Contact {
+      a {
+          display: block;
+          color: $text-white-color;
+          text-decoration: none;
+
+          &:hover {
+              text-decoration: underline;
+          }
+      }
+  }
+}
+
 
 /* ========= RESPONSIVE NAVBAR ========= */
 @media screen and (max-width: 1400px) and (min-width: 1024px) {
   .header-gauche {
     margin-left: 5%;
   }
-  header {
+  .header-accueil {
     h1 {
     font-size: 4rem;
     img {
@@ -556,7 +623,7 @@ footer {
 
   /*  =========Header ========= */
 
-  header {
+  .header-accueil {
     h1 {
     font-size: 3rem;
     img {
@@ -580,7 +647,7 @@ footer {
   }
   .section3 {
     height: auto;
-    background-color: white;
+    background-color: $text-white-color;
     h3 {
       margin-top: 10%;
       img {
@@ -633,9 +700,22 @@ footer {
   }
 
   .offres-container {
-    flex-wrap: wrap;
     gap: 2rem;
   }
+  .offre {
+    width: 20rem;
+  }
+  .doigt-gauche {
+    top: 74%;
+    width: 30%;
+  }
+  .doigt-droite {
+    top: 65%;
+    width: 20%;
+  }
+}
+.container {
+  gap: 5rem;
 }
 }
 
@@ -750,6 +830,10 @@ footer {
   h5 {
   font-size: 2rem;
   }
+  
+  .offres-container {
+    flex-wrap: wrap;
+  }
   .offre-etudiante {
     width: 100%;
   }
@@ -757,5 +841,16 @@ footer {
   .offre-famille {
     width: 100%;
   }
+  .doigt-gauche {
+    display: none;
+  }
+  .doigt-droite {
+    display: none;
+  }
+}
+// ===================== FOOTER ======================================================
+.container {
+  gap: 1rem;
+  padding: 20px 40px 20px 40px;
 }
 }

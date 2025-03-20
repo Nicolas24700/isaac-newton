@@ -11,6 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Outfit", sans-serif;
 }
 
 /* ================================ */
@@ -439,19 +440,68 @@ header .header-droite img {
   background: url("./img/offre_etudiant.jpg") center/cover no-repeat;
 }
 .section-reservation .offre-famille {
-  background: url("./img/offre_famille.jpg") center/cover no-repeat;
+  background: url("../img/offre_famille.jpg") center/cover no-repeat;
+}
+.section-reservation .doigt-gauche {
+  position: absolute;
+  left: 0%;
+  top: 71%;
+  z-index: 20;
+}
+.section-reservation .doigt-droite {
+  position: absolute;
+  right: 0%;
+  top: 60%;
+  z-index: 20;
 }
 
 footer {
   height: 50vh;
   width: 100%;
-  background-image: url(../img/footer.png);
+  background-image: url(../img/footer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-top: 10%;
   z-index: 4;
   position: relative;
+  top: 15rem;
+}
+
+.container {
+  display: flex;
+  color: white;
+  padding: 20px 13rem 20px 40px;
+  gap: 10rem;
+  width: 100%;
+  position: relative;
+  top: 12.5rem;
+}
+.container .mention {
+  flex: 1;
+}
+.container a {
+  color: white;
+  text-decoration: none;
+}
+.container a:hover {
+  text-decoration: underline;
+}
+.container .right-section {
+  display: flex;
+  gap: 40px;
+  flex: 3;
+  justify-content: flex-end;
+}
+.container .right-section div {
+  text-align: left;
+}
+.container .Contact a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+.container .Contact a:hover {
+  text-decoration: underline;
 }
 
 /* ========= RESPONSIVE NAVBAR ========= */
@@ -579,8 +629,21 @@ footer {
     margin-bottom: 20px;
   }
   .section-reservation .offres-container {
-    flex-wrap: wrap;
     gap: 2rem;
+  }
+  .section-reservation .offre {
+    width: 20rem;
+  }
+  .section-reservation .doigt-gauche {
+    top: 74%;
+    width: 30%;
+  }
+  .section-reservation .doigt-droite {
+    top: 65%;
+    width: 20%;
+  }
+  .container {
+    gap: 5rem;
   }
 }
 @media (max-width: 768px) {
@@ -666,7 +729,7 @@ footer {
     flex-direction: column;
   }
   .section4 > div .affiche-gauche {
-    width: 50%;
+    width: 80%;
     margin-bottom: 20px;
   }
   .section4 > div > div {
@@ -678,12 +741,25 @@ footer {
   .section-reservation h5 {
     font-size: 2rem;
   }
+  .section-reservation .offres-container {
+    flex-wrap: wrap;
+  }
   .section-reservation .offre-etudiante {
     width: 100%;
   }
   .section-reservation .offre-famille {
     width: 100%;
   }
+  .section-reservation .doigt-gauche {
+    display: none;
+  }
+  .section-reservation .doigt-droite {
+    display: none;
+  }
+  .container {
+    gap: 1rem;
+    padding: 20px 40px 20px 40px;
+  }
 }
 
-/*# sourceMappingURL=navbar.css.map */
+/*# sourceMappingURL=home.css.map */

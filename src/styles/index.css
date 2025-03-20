@@ -11,6 +11,35 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.skip-link {
+  background-color: #fff;
+  border: solid 3px #000;
+  color: #000;
+  padding: 0.4em 0.5em;
+  text-decoration: none;
+}
+
+.skip-link:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.skip-link:focus {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 999;
 }
 
 /*# sourceMappingURL=index.css.map */
