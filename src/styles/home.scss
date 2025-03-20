@@ -482,7 +482,7 @@ nav {
 }
 
 // ===================== FOOTER ======================================================
-footer {
+.footer {
   height: 50vh;
   width: 100%;
   background-image: url(../img/accueil/footer.jpg);
@@ -556,7 +556,7 @@ footer {
   .header-gauche {
     margin-left: 5%;
   }
-  header {
+  .header-accueil {
     h1 {
     font-size: 4rem;
     img {
@@ -623,7 +623,7 @@ footer {
 
   /*  =========Header ========= */
 
-  header {
+  .header-accueil {
     h1 {
     font-size: 3rem;
     img {

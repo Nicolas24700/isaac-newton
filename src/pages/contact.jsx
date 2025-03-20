@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { Footerbasic } from '../components/footerbasic'
-import { ConceptAccueil } from '../components/concept-accueil'
+import { ContactComposents } from '../components/contact-components'
 
-function Concept() {
+function Contact() {
   return (
     <>
-      <ConceptAccueil />
+      <ContactComposents />
       <Footerbasic />
     </>
   )
 }
 
-export default Concept
+export default Contact

@@ -25,6 +25,58 @@
     "MentionsLegales": "Mentions Légales",
     "expo3D": "Exposition 3D",
     "agencesite":"Site de l'agence",
-    "HDP": "haut de page"
+    "HDP": "haut de page",
+    "concepttexte": "<strong>Newton</strong> n'a pas seulement marqué l'histoire, il a révolutionné notre façon de comprendre le monde. Grâce à ses découvertes sur la <strong>gravité</strong>, la <strong>lumière</strong> et le <strong>mouvement</strong>, il a posé les bases de la <strong>science moderne</strong>.Cette exposition immersive vous emmène au cœur de ses plus grandes découvertes dans lequel vous pourrez <strong>explorer, tester</strong> et <strong>interagir</strong> avec des expériences qui rendent la science plus attractive. ",
+    "videolink": "Découvrez notre Teaser ! ",
+    "expotitle": "Exposition Immersive : <br>Gravilight",
+    "expotext": "Entrez dans une <strong>expérience unique</strong> où la science prend vie ! Grâce à notre <strong>exposition virtuelle</strong>, explorez les découvertes de Newton comme si vous y étiez. Déplacez-vous librement, observez ses théories en action et découvrez l'environnement pour mieux comprendre la gravité, la lumière et le mouvement. <br><br>Une visite immersive qui vous plonge au cœur de la science d'une façon inédite !",
+    "jouermtn": "Jouer maintenant",
+    "contactnous": "Contactez-nous",
+    "contacttext": "Envie d'en savoir plus sur l'expo ou sur votre réservation ? <br> Notre équipe vous répond avec plaisir ! Écrivez-nous et on vous recontacte au plus vite.",
+    "contactreseau": "Suivez nous sur les réseaux sociaux",
+    "fromtitle": "Envoyez nous un message",
+    "prenom": "Prénom",
+    "nom": "Nom",
+    "envoyer": "Envoyer le message",
+    "sujet" : "sujet",
+    "infoexpo" : "Informations sur l'exposition",
+    "reser" : "Problème avec ma réservation",   
+    "modifreser" : "Modification ou annulation de réservation",
+    "tarif" : "Tarifs et réductions",
+    "autre" : "Autre",
+    "choisirsujet": "Choisir le sujet",
+    "votremessage": "Votre message",
+
+    "Editeur": "Éditeur du site",
+    "Editeurdetail": {
+        "directeur": "Directeur de publication : Université Gustave Eiffel",
+        "adresse": "Adresse : 5 bd Descartes, 77420 Champs-sur-Marne",
+        "tel": "Contact : 0160957500",
+        "siren": "Numéro de SIREN : 130 026 123 00013",
+        "ape": "Code APE : 85.42Z",
+        "president": "Président : Gilles Roussel"
+    },
+    "Contributeurs": "Contributeurs",
+    "Contributeursdetail": {
+        "front": "Développement front : Molduch Nicolas",
+        "site3D": "Développement site 3D : Molduch Nicolas",
+        "back": "Développement back : Nguyen Thuy Hang",
+        "graphisme": "Graphisme : Wagne Ramata, Ahmed-Amine Sakkal, Laure Missie, Delphine Quach",
+        "communication": "Communication : Wagne Ramata"
+    },
+    "hebergement": "Hébergement",
+    "hebergementdetail": {
+        "hebergeur": "Le site est hébergé par : Infomaniak Network SA",
+        "adresse": "Adresse : Rue Eugène-Marziano 25, 1227 Genève, Suisse",
+        "tel": "Téléphone : +41 22 820 35 44",
+        "siteweb": "Site web : "
+    },
+    "ProprieteIntellectuelle": "Propriété intellectuelle",
+    "ProprieteIntellectuelledetail": {
+        "texte": "L'ensemble du contenu présent sur ce site (textes, images, vidéos, logos, graphismes, etc.) est protégé par les lois en vigueur sur la propriété intellectuelle. Toute reproduction, distribution ou exploitation sans autorisation préalable est interdite."
+    },
+    "protection": "Protection des données personnelles",
+    "protectiondetail": "Conformément au Règlement Général sur la Protection des Données (RGPD), les informations collectées sur ce site sont utilisées uniquement pour la gestion des réservations.",
+    "cookiesdetail": "Nous n'utilisons pas de cookies ou de tags pour suivre l'utilisation de notre plateforme par nos clients et comprendre leurs préférences sur le site de l'exposition d'Issac Newton. En effet, nous n'avons pas besoin d'obtenir des informations générales sur le trafic de la Plateforme et ses interactions, d'identifier des tendances et d'obtenir des statistiques, puisque le site n'est pas un site commercial."
 
 }

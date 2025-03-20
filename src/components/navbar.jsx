@@ -13,6 +13,7 @@ export const Navbar = ({changeLanguage}) => {
 
     return (
         <nav>
+         <a href="#header-website" class="skip-link">Aller au contenu</a>
             <div className="nav-header">
                 <a href="/home" className="logo_navbar">
                     <img src="./img/accueil/LogoNavbar.png" alt="Lien vers la page d'accueil" />
@@ -24,9 +25,9 @@ export const Navbar = ({changeLanguage}) => {
             <ul>
                 <li><a href="/home" className={location.pathname === '/home' ? 'active' : ''}>{t('Accueil')}</a></li>
                 <li><a href="/concept" className={location.pathname === '/concept' ? 'active' : ''}>{t('Concept')}</a></li>
-                <li><a href="#" >{t('Exposition')}</a></li>
-                <li><a href="#">{t('Réservation')}</a></li>
-                <li><a href="#">{t('Contact')}</a></li>
+                <li><a href="/exposition" className={location.pathname === '/exposition' ? 'active' : ''} >{t('Exposition')}</a></li>
+                <li><a href="/reservation" className={location.pathname === '/reservation' ? 'active' : ''} >{t('Réservation')}</a></li>
+                <li><a href="/contact" className={location.pathname === '/contact' ? 'active' : ''} >Contact</a></li>
             </ul>
             <div className="lang-switch">
                 <button onClick={() => changeLanguage('fr')}>

@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import { Footerbasic } from '../components/footerbasic'
-import { ConceptAccueil } from '../components/concept-accueil'
-
-function Concept() {
+import {Expopage} from '../components/pageexpositioncompo'
+function Expo() {
   return (
     <>
-      <ConceptAccueil />
+      <Expopage />
       <Footerbasic />
     </>
   )
 }
 
-export default Concept
+export default Expo

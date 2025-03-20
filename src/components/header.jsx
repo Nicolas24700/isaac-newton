@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 export const Header = () => {
     const { t } = useTranslation();
     return (
-        <header className="header-accueil">
+        <header className="header-accueil" id='header-website'>
             <div className="header-box">
                 <div className="header-gauche">
                     <img src="./img/accueil/planetes.png" alt="" className="planetesdeh1" />

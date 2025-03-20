@@ -1,0 +1,185 @@
+@import 'index';
+
+// ====================================== CONTACT ======================================
+.section-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./img/accueil/fond_carton.jpg');
+    padding-top: 5rem;
+    .parentdesdivs {
+        display: flex;
+        gap: 15rem;
+    }
+}
+.container-form {
+    background: $text-white-color;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 4px 1px rgba(0, 0, 0, 0.4);
+    width: 350px;
+    h2 {
+        text-align: left;
+        font-size: 1.25rem;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        box-sizing: border-box;
+        background-color: rgba(217, 217, 217, 0.46);
+        color: #8D8D8D;
+    }
+    
+    
+    textarea {
+        height: 100px;
+        resize: none;
+    }
+    
+    button {
+        background-color: #001a1a;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #003333;
+        transform: scale(0.9);
+    }
+    
+}
+.div-gauche {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+    margin-left: 5rem;
+    h1 {
+        font-size: 3rem;
+        margin-top: 0;
+        text-transform: uppercase;
+    }
+    .div-gauche-haut {
+        p {
+            font-size: 1.3rem;
+        }
+    }
+}
+.div-gauche-bas{
+    font-size: 1.2rem;
+    font-weight: bold;
+    i {
+        margin-right: 2rem;
+        font-size: 2rem;
+    }
+    a  {
+        color: $text-black-color;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.div-gauche-reseaux {
+    font-size: 1.2rem;
+    font-weight: bold;
+    p {
+        margin-bottom: 0;
+    }
+    .reseaux {
+        display: flex;
+        gap: 2rem;
+        p {  
+            font-size: 2rem;
+        }
+        a{
+            color: $text-black-color;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            &:hover {
+                color: $text-white-color;
+            }
+        }
+    }
+
+}
+// ====================================== MENTION LEGALES  ======================================
+.mentionlegales {
+    padding-top: 5rem;
+    background-image: url('./img/accueil/fond_carton.jpg');
+    height: auto;
+    padding-bottom: 2rem;
+    font-size: 1rem;
+    a {
+        color: $text-black-color;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    h1 {
+        font-size: 3rem;
+        margin-top: 0;
+    }
+    .container-mention {
+        margin: 0rem 5rem 0 5rem;
+    }
+    ol {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 1400px) and (min-width: 1024px) {
+    .section-contact {
+        .parentdesdivs {
+            gap: 5rem;
+        }
+    }
+}
+@media (max-width: 1024px) { 
+    .section-contact {
+        height: auto;
+        .parentdesdivs{
+            flex-direction: column;
+            gap: 5rem;
+        }
+    }
+    .div-gauche {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: auto;
+    }
+    .div-droite {
+        justify-content: center;
+        display: flex;
+        padding-bottom: 1rem;
+    }
+    .mentionlegales {
+        height: auto;
+        .container-mention {
+            margin: 0rem 1rem 0 1rem;
+        }
+    }
+
+
+}

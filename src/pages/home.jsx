@@ -1,4 +1,3 @@
-import { Navbar } from '../components/navbar'
 import { Header } from '../components/header'
 import { Sectionwhonewton } from '../components/Sectionwhonewton'
 import { Exposition } from '../components/exposition'

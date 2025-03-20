@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import { Footerbasic } from '../components/footerbasic'
-import { ConceptAccueil } from '../components/concept-accueil'
-
-function Concept() {
+import {Mentioncompo} from '../components/mentionlegales'
+function Mentionlegales() {
   return (
     <>
-      <ConceptAccueil />
+    <Mentioncompo />
       <Footerbasic />
     </>
   )
 }
 
-export default Concept
+export default Mentionlegales
