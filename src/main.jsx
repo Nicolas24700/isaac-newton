@@ -6,6 +6,7 @@ import './styles/home.scss'
 import './styles/concept.scss'
 import './styles/expo.scss'
 import './styles/contact.scss'
+import './styles/reservation.scss'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

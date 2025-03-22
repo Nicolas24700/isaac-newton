@@ -13,7 +13,7 @@ export const Navbar = ({changeLanguage}) => {
 
     return (
         <nav>
-         <a href="#header-website" class="skip-link">Aller au contenu</a>
+         <a href="#header-website" className="skip-link">Aller au contenu</a>
             <div className="nav-header">
                 <a href="/home" className="logo_navbar">
                     <img src="./img/accueil/LogoNavbar.png" alt="Lien vers la page d'accueil" />
