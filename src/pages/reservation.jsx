@@ -1,11 +1,13 @@
-import { Footer } from '../components/footer'
+import { Footerbasic } from '../components/footerbasic';
+import { Reservationcompo } from '../components/reservation';
 
 const Reservation = () => {
-  return (
-    <>
-      <Footer />
-    </>
-  )
-}
+    return (
+        <>
+            <Reservationcompo />
+            <Footerbasic />
+        </>
+    );
+};
 
-export default Reservation
+export default Reservation;
