@@ -1,6 +1,52 @@
 import { useTranslation, Trans } from 'react-i18next';
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export const ConceptAccueil = () => {
     const { t } = useTranslation();
+    useEffect(() => {
+        gsap.fromTo('.conceptheaderdiv h1',
+          {opacity: 0 }, 
+          {opacity: 1, duration: 1, scrollTrigger: {
+            trigger: '.conceptheaderdiv h1',
+            toggleActions: 'play none none reset'
+          }}
+        );
+        gsap.fromTo('.conceptheaderdiv p',
+            { opacity: 0 }, 
+            { opacity: 1, duration: 2, scrollTrigger: {
+              trigger: '.conceptheaderdiv h1',
+              toggleActions: 'play none none reset'
+            }}
+          );
+          gsap.fromTo('.conceptheaderdiv a',
+            { opacity: 0 }, 
+            { opacity: 1, duration: 3, scrollTrigger: {
+              trigger: '.conceptheaderdiv h1',
+              toggleActions: 'play none none reset'
+            }}
+          );
+          gsap.to('.nuagegauche', {
+            rotate: 1,
+            duration: 1,
+            repeat: -1,
+            yoyo: true,
+            ease: 'power1.inOut'
+          });
+          gsap.to('.nuagedroite', {
+            x: -10,
+            rotate: 1,
+            duration: 1,
+            repeat: -1,
+            yoyo: true,
+            ease: 'power1.inOut'
+          });
+
+      }, []);
+
     return (
         <>
         <header className="Concept-header" id='header-website'>
@@ -9,7 +55,7 @@ export const ConceptAccueil = () => {
                 <p>
                 <Trans i18nKey="concepttexte">
                 </Trans></p>
-                <a href="#linkvideo"><i class="fa-brands fa-youtube"></i> {t('videolink')}</a>
+                <a href="#linkvideo"><i className="fa-brands fa-youtube"></i> {t('videolink')}</a>
             </div>
         </header>
         <section className='conceptsection'>

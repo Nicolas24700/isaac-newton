@@ -2,8 +2,33 @@ import React, { useState } from 'react';
 import { FormReservationTicket } from '../components/Formreservation';
 import { useTranslation } from 'react-i18next';
 
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 export const Reservationcompo = () => {
     const { t } = useTranslation();
+    useEffect(() => {
+        gsap.fromTo('.reservationsection', 
+            { y: 500 }, 
+            { y: 0, duration: 1.5, scrollTrigger: {
+                trigger: '.reservationsection',
+                toggleActions: 'play none none reset'
+            }}
+        );
+        gsap.fromTo('.divdeh1', 
+            { y: 500}, 
+            { y: 0, duration: 1.5, scrollTrigger: {
+                trigger: '.reservationsection',
+                toggleActions: 'play none none reset'
+            }}
+        );
+    }, []);
+
+
     // État pour afficher ou masquer le résumé de la réservation
     const [showSummary, setShowSummary] = useState(false);
     // État pour stocker les données de la réservation

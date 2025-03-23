@@ -19,7 +19,7 @@ export const Footerbasic = () => {
                 </div>
                 <div className="Contactbasic">
                     <p><a href="/contact"><strong>{t('Contact')}</strong></a></p>
-                    <a href="#">{t('agencesite')}</a>
+                    <a href="https://wavycom.missie.butmmi.o2switch.site/" target='blank'>{t('agencesite')}</a>
                 </div>
             </div>
             <div className="HDPbasic">

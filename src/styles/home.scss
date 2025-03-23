@@ -80,7 +80,7 @@ nav {
   justify-content: center;
 
   h1 {
-    color: $text-black-color;
+    color: black;
     font-size: 6rem;
     text-align: start;
     margin: 0;
@@ -89,7 +89,7 @@ nav {
     img {
      top: 1.25rem;
      position: relative;
-    animation: slidebas 1s ease-out;
+    animation: slidebas 2s ease;
     width: 6rem;
     }
     
@@ -107,7 +107,7 @@ nav {
   .header-droite img {
     width: 100%;
     height: 100vh;
-    animation: slidehaut 1s ease-out;
+    animation: slidehaut 2s ease;
   }
 }
 .planetesdeh1 {
@@ -472,10 +472,11 @@ nav {
     left: 0%;
     top: 71%;
     z-index: 20;
+    pointer-events: none;
   }
   .doigt-droite {
     position: absolute;
-    right: 0%;
+    right: 0;
     top: 60%;
     z-index: 20;
   }
