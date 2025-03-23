@@ -23,7 +23,7 @@ export const Navbar = ({changeLanguage}) => {
                 </button>
             </div>
             <ul>
-                <li><a href="/home" className={location.pathname === '/home' ? 'active' : ''}>{t('Accueil')}</a></li>
+                <li><a href="/home" className={location.pathname === '/home' ? 'active' : ''}>{t('accueil')}</a></li>
                 <li><a href="/concept" className={location.pathname === '/concept' ? 'active' : ''}>{t('Concept')}</a></li>
                 <li><a href="/exposition" className={location.pathname === '/exposition' ? 'active' : ''} >{t('Exposition')}</a></li>
                 <li><a href="/reservation" className={location.pathname === '/reservation' ? 'active' : ''} >{t('Réservation')}</a></li>
@@ -31,10 +31,10 @@ export const Navbar = ({changeLanguage}) => {
             </ul>
             <div className="lang-switch">
                 <button onClick={() => changeLanguage('fr')}>
-                    <img src="./img/accueil/drapeau_france.png" alt="FR" />
+                    <img aria-label='langue Française' src="./img/accueil/drapeau_france.png" alt="FR" />
                 </button>
                 <button onClick={() => changeLanguage('en')}>
-                    <img src="./img/accueil/drapeau_anglais.png" alt="EN" />
+                    <img aria-label='English language' src="./img/accueil/drapeau_anglais.png" alt="EN" />
                 </button>
             </div>
         </nav>
