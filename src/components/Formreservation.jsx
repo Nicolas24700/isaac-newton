@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
-export const FormReservationTicket = () => {
+export const FormReservationTicket = ({ setShowSummary, setSummaryData }) => {
+      const { t } = useTranslation();
+
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
@@ -9,16 +12,15 @@ export const FormReservationTicket = () => {
   const maxReservations = 10;
 
   // valeur des jours de la semaine et des horaires
-  const daysOfWeek = ["LUN", "MAR", "MEC", "JEU", "VEN", "SAM", "DIM"];
-  const availableTimes = ["8h", "10h", "12h", "14h", "16h", "18h", "20h"];
+  const jourdelasemaine = [t('ReserForm.LUN'), t('ReserForm.MAR'), t('ReserForm.MEC'), t('ReserForm.JEU'), t('ReserForm.VEN'), t('ReserForm.SAM'), t('ReserForm.DIM')];
+  const horaires = ["8h","9h", "10h","11h", "12h","13h", "14h","15h", "16h","17h", "18h","19h", "20h"];
 
   // tableau des tarifs
-  const pricing = [
-    { id: "adulte", label: "Adulte",labeldetail: "(> 26 ans)", price: 15 },
-    { id: "jeune", label: "Jeune Adulte",labeldetail: "(18 - 25 ans)", price: 8 },
-    { id: "enfant", label: "Enfant",labeldetail: "(< 18 ans)", price: 5 }
+  const prix = [
+    { id: "adulte", label: t('ReserForm.Adulte'),labeldetail: `(> 26 ${t('ReserForm.ans')})`, price: 15 },
+    { id: "jeune", label: t('ReserForm.JeuneAdulte'),labeldetail: `(18 - 25 ${t('ReserForm.ans')})`, price: 8 },
+    { id: "enfant", label: t('ReserForm.Enfant'),labeldetail: `(< 18  ${t('ReserForm.ans')})`, price: 5 }
   ];
-
   // Fonctions pour gérer le calendrier en prenant la date actuelle
   const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
   const getFirstDayIndex = (year, month) => new Date(year, month, 1).getDay();
@@ -42,13 +44,19 @@ export const FormReservationTicket = () => {
       setQuantities({ ...quantities, [id]: value });
     }
   };
-// fonction pour valider le formulaire (test si une date, une heure et au moins un billet sont sélectionnés)
+// fonction pour valider le formulaire 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (selectedDate && selectedTime && Object.values(quantities).some((q) => q > 0)) {
-      alert(`RDV : ${selectedDate.toLocaleDateString("fr-FR")} à ${selectedTime}\nTotal billets : ${Object.values(quantities).reduce((a, b) => a + b, 0)}`);
+      setShowSummary(true); // Afficher la div panier-resume
+      setSummaryData({
+        selectedDate,
+        selectedTime,
+        quantities,
+        prix
+      });
     } else {
-      alert("Veuillez choisir une date, une heure et au moins un billet !");
+      alert(t('ReserForm.alertformbillet'));
     }
   };
   // fonction pour annuler le formulaire 
@@ -56,8 +64,8 @@ export const FormReservationTicket = () => {
     setSelectedDate(null);
     setSelectedTime(null);
     setQuantities({ adulte: 0, jeune: 0, enfant: 0 });
+    setShowSummary(false);
   };
-
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
@@ -67,11 +75,11 @@ export const FormReservationTicket = () => {
       <div className="calendar-container">
         <div className="calendar-header">
           <button type="button" onClick={() => changeMonth(-1)}>{"<"}</button>
-          <h3>{currentDate.toLocaleString("fr-FR", { month: "long", year: "numeric" }).toUpperCase()}</h3>
+          <h3>{currentDate.toLocaleString(t('ReserForm.locale'), { month: "long", year: "numeric" }).toUpperCase()}</h3>
           <button type="button" onClick={() => changeMonth(1)}>{">"}</button>
         </div>
         <div className="calendar-grid">
-          {daysOfWeek.map((day) => (
+          {jourdelasemaine.map((day) => (
             <div key={day} className="calendar-day-header">{day}</div>
           ))}
           {/* // tableau des jours vides */}
@@ -92,9 +100,9 @@ export const FormReservationTicket = () => {
       </div>
 
       {/* Sélection de l'horaire */}
-      <h2>Horaires</h2>
+      <h2>{t('ReserForm.Horaires')}</h2>
       <div className="time-selection">
-        {availableTimes.map((time) => (
+        {horaires.map((time) => (
           <button
             key={time}
             type="button"
@@ -105,21 +113,20 @@ export const FormReservationTicket = () => {
           </button>
         ))}
       </div>
-
       {/* Tarifs */}
-      <h2>Tarifs</h2>
-      {pricing.map(({ id, label,labeldetail, price }) => (
+      <h2>{t('ReserForm.Tarifs')}</h2>
+      {prix.map(({ id, label,labeldetail, price }) => (
         <div key={id} className="tarif-box">
           <div className="tarif-info">
             <p>{label}</p>
             <span>{labeldetail}</span>
           </div>
           <div className="tarif-price">
-                <p className="p_prix">Prix</p>
+                <p className="p_prix">{t('ReserForm.Tarifs')}</p>
                 <span>{price.toFixed(2)}€</span>
             </div>
           <div className="tarif-quantity">
-              <label htmlFor={`quantitebillet-${id}`}>Quantité</label>
+              <label htmlFor={`quantitebillet-${id}`}>{t('ReserForm.Quantite')}</label>
               <select name="quantitebillet" id={`quantitebillet-${id}`}
                 value={quantities[id]}
                 onChange={(e) => handleQuantityChange(id, parseInt(e.target.value, 10))}
@@ -132,16 +139,9 @@ export const FormReservationTicket = () => {
         </div>
       ))}
 
-      {/* Résumé */}
-      {selectedDate && selectedTime && (
-        <p className="selected-text">
-          RDV sélectionné : {selectedDate.toLocaleDateString("fr-FR")} à {selectedTime}
-        </p>
-      )}
-
       <div className="boutton-container-reservationForm">
-          <button type="button" className="cancel-button" onClick={resetForm}>Annuler</button>
-          <button type="submit" className="submit-button">Confirmer</button>
+          <button type="button" className="cancel-button" onClick={resetForm}>{t('ReserForm.annuler')}</button>
+          <button type="submit" className="submit-button">{t('ReserForm.confirmer')}</button>
       </div>
     </form>
   );
