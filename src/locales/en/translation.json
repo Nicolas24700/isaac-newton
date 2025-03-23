@@ -76,7 +76,43 @@
     },
     "protection": "Personal data protection",
     "protectiondetail": "In accordance with the General Data Protection Regulation (RGPD), the information collected on this site is used solely to manage reservations.",
-    "cookiesdetail": "We do not use cookies or tags to track how our customers use our Platform and understand their preferences on the Issac Newton Exhibition website. Indeed, we do not need to obtain general information about Platform traffic and interactions, identify trends and obtain statistics, since the site is not a commercial site."
+    "cookiesdetail": "We do not use cookies or tags to track how our customers use our Platform and understand their preferences on the Issac Newton Exhibition website. Indeed, we do not need to obtain general information about Platform traffic and interactions, identify trends and obtain statistics, since the site is not a commercial site.",
+    
+    "ReserForm": {
+        "LUN": "MON",
+        "MAR": "TUE",
+        "MEC": "WED",
+        "JEU": "THU",
+        "VEN": "FRI",
+        "SAM": "SAT",
+        "DIM": "SUN",
+        "Adulte": "Adult",
+        "JeuneAdulte": "Young Adult",
+        "Enfant": "Child",
+        "ans": "years old",
+        "alertformbillet": "Please choose a date, a time and at least one ticket!",
+        "Horaires": "Opening hours",
+        "Tarifs": "Prices",
+        "Quantite": "Quantity",
+        "locale" : "en-GB",
+        "annuler": "Cancel",
+        "confirmer": "Confirm",
+        "valider": "Validate",
+        "alertvide": "Please fill in all fields before validating.",
+        "alertmail": "❌ Please enter a valid email address.",
+        "succes" : "✅ Your reservation has been successfully sent !",
+        "totalbillet" : "🎟️ Total tickets : ",
+        "name": "👤 Name :",
+        "mailconfirm": "📥 You will receive confirmation by e-mail.",
+        "panier" : "CART",
+        "panierinfo1" : "Online booking, e-ticket by e-mail",
+        "panierinfo2" : "If you have any questions, call 3311",
+        "panierparagraphe" : "For group bookings (more than 10 people), please send us an e-mail at least 2 days before your arrival with the complete list of people (surname, first name and date of birth).",
+        "tareservation" : "Your reservation",
+        "jourchoice" : "Selected day : ",
+        "SOUS-TOTAL" : "TOTAL"
+
+}
 
 
 }

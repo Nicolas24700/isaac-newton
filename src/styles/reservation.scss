@@ -9,16 +9,22 @@
 }
 .divdeh1 {
     position: absolute;
-    bottom: 4rem;
-    top: 22%;
-    right: 25%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -20%);
     pointer-events: none;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 .reservh1 {
     color: $text-white-color;
     font-size: 6rem;
     margin-top: 0;
     padding: 1rem;
     background-image: url('../img/accueil/fond_carton.jpg');
+    text-transform: uppercase;
 }
 }
 .reservationsection {
@@ -39,8 +45,6 @@
     }
 }
     .divpanier {
-        background-color: blue;
-
         width: 100%;
         padding: 0 2.5rem 2.5rem 2.5rem;
         background-color: $background-gris;
@@ -78,7 +82,8 @@
         background-color: $text-white-color;
         border: 4px solid $rouge-color;
 
-        // visibility: hidden;
+        visibility: hidden;
+
         position: relative;
         &::before {
             content: '';
@@ -101,8 +106,9 @@
         h3 {
             font-size: 1.5rem;
             align-self: start;
-            margin-top: 0;
+            margin: 0;
             z-index: 2;
+            text-transform: uppercase;
         }
         .panierligne {
         background-color: $text-black-color;
@@ -188,16 +194,17 @@
   
   .calendar-day {
     padding: 10px;
-    background: #eee;
+    background-color: $text-white-color;
     cursor: pointer;
     transition: all 0.3s;
     &:hover {
-      background: lightblue;
+      background-color: $rouge-color;
+      color: $text-white-color;
     }
   }
   
   .selected {
-    background: blue;
+    background-color: $rouge-color;
     color: white;
   }
   
@@ -214,20 +221,28 @@
     border: 2px solid #333;
     background: white;
     cursor: pointer;
+    justify-content: center;
+    align-items: center; 
+    width: 100px;
+    display: flex;
+    transition: all 0.3s ease;
 
     &:hover {
-      background: lightblue;
+      background-color: $rouge-color;
+        color: $text-white-color;
     }
   }
   
   .time-button.selected {
-    background: blue;
-    color: white;
+    background-color: $rouge-color;
+    color: $text-white-color;
   }
   
   .selected-text {
     margin-top: 10px;
     font-weight: bold;
+    z-index: 10;
+    align-self: start;
   }
   
   .tarif-box {
@@ -293,4 +308,112 @@
         color: $text-black-color;
     }
   }
+}
+
+
+// ============================================================================================
+
+.panier-resume form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    z-index: 10;
+}
+
+.panier-resume form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.panier-resume form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.panier-resume form input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.panier-resume form input:focus {
+    border-color: $text-black-color;
+    outline: none;
+}
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.success-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.success-message {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: $text-black-color;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 80%;
+    text-align: start;
+}
+
+.success-message p {
+    margin: 10px 0;
+}
+
+@media (max-width: 1024px) {
+    .reservationsection {
+        .divparentreservation {
+            .divform {
+                padding: 3rem 1rem 1rem 1rem;
+            }
+            .div-droitereserv {
+                padding: 3rem 1rem 1rem 1rem;
+            }
+        }
+    }
+}
+@media (max-width: 900px) {
+
+    .reservationsection {
+        .divparentreservation {
+            flex-direction: column;
+        }
+    }
+    .calendar-container {
+        padding: 0;
+        width: auto;
+      }
+      .calendar-header {
+        padding: 0;
+      }
+      .calendar-grid {
+        gap: 0;
+      }
+      .divdeh1 {
+        top: 25%;
+        right: 7%;
+        .reservh1 {
+            font-size: 3rem;
+        }
+      }
 }

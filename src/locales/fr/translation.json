@@ -77,6 +77,41 @@
     },
     "protection": "Protection des données personnelles",
     "protectiondetail": "Conformément au Règlement Général sur la Protection des Données (RGPD), les informations collectées sur ce site sont utilisées uniquement pour la gestion des réservations.",
-    "cookiesdetail": "Nous n'utilisons pas de cookies ou de tags pour suivre l'utilisation de notre plateforme par nos clients et comprendre leurs préférences sur le site de l'exposition d'Issac Newton. En effet, nous n'avons pas besoin d'obtenir des informations générales sur le trafic de la Plateforme et ses interactions, d'identifier des tendances et d'obtenir des statistiques, puisque le site n'est pas un site commercial."
+    "cookiesdetail": "Nous n'utilisons pas de cookies ou de tags pour suivre l'utilisation de notre plateforme par nos clients et comprendre leurs préférences sur le site de l'exposition d'Issac Newton. En effet, nous n'avons pas besoin d'obtenir des informations générales sur le trafic de la Plateforme et ses interactions, d'identifier des tendances et d'obtenir des statistiques, puisque le site n'est pas un site commercial.",
 
+    "ReserForm":{
+        "LUN": "LUN",
+        "MAR": "MAR",
+        "MEC": "MEC",
+        "JEU": "JEU",
+        "VEN": "VEN",
+        "SAM": "SAM",
+        "DIM": "DIM",
+        "Adulte": "Adulte",
+        "JeuneAdulte": "Jeune Adulte",
+        "Enfant": "Enfant",
+        "ans": "ans",
+        "alertformbillet": "Veuillez choisir une date, une heure et au moins un billet !",
+        "Horaires": "Horaires",
+        "Tarifs": "Tarifs",
+        "Quantite": "Quantité",
+        "locale" : "fr-FR",
+        "annuler": "Annuler",
+        "confirmer": "Confirmer",
+        "valider": "Valider",
+        "alertvide": "Veuillez remplir tous les champs avant de valider.",
+        "alertmail": "❌ Veuillez entrer une adresse email valide.",
+        "succes" : "✅ Votre réservation à été envoyée avec succès !",
+        "totalbillet" : "🎟️ Total billets : ",
+        "name": "👤 Nom :",
+        "mailconfirm": "📥 Vous recevrez la confirmation par mail.",
+        "panier" : "PANIER",
+        "panierinfo1" : "Réservation en ligne, e-billet par mail",
+        "panierinfo2" : "Pour toute question, contactez le 3311",
+        "panierparagraphe" : "Pour les réservations de groupe (plus de 10 personnes), merci de nous envoyer un mail au moins 2 jours avant votre venue avec la liste complète des personnes (nom, prénom et date de naissance).",
+        "tareservation" : "Votre réservation",
+        "jourchoice" : "Jour sélectionné : ",
+        "SOUS-TOTAL" : "SOUS-TOTAL"
+
+    }
 }
