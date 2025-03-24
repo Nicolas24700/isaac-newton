@@ -13,13 +13,13 @@ export const FormReservationTicket = ({ setShowSummary, setSummaryData }) => {
 
   // valeur des jours de la semaine et des horaires
   const jourdelasemaine = [t('ReserForm.LUN'), t('ReserForm.MAR'), t('ReserForm.MEC'), t('ReserForm.JEU'), t('ReserForm.VEN'), t('ReserForm.SAM'), t('ReserForm.DIM')];
-  const horaires = ["8h","9h", "10h","11h", "12h","13h", "14h","15h", "16h","17h", "18h","19h", "20h"];
+  const horaires = ["10h","11h", "12h","13h", "14h","15h", "16h","17h", "18h"];
 
   // tableau des tarifs
   const prix = [
-    { id: "adulte", label: t('ReserForm.Adulte'),labeldetail: `(> 26 ${t('ReserForm.ans')})`, price: 15 },
-    { id: "jeune", label: t('ReserForm.JeuneAdulte'),labeldetail: `(18 - 25 ${t('ReserForm.ans')})`, price: 8 },
-    { id: "enfant", label: t('ReserForm.Enfant'),labeldetail: `(< 18  ${t('ReserForm.ans')})`, price: 5 }
+    { id: "adulte", label: t('ReserForm.Adulte'),labeldetail: `(> 26 ${t('ReserForm.ans')})`, price: 10 },
+    { id: "jeune", label: t('ReserForm.JeuneAdulte'),labeldetail: `(18 - 25 ${t('ReserForm.ans')})`, price: 5 },
+    { id: "enfant", label: t('ReserForm.Enfant'),labeldetail: `(< 18  ${t('ReserForm.ans')})`, price: 0 }
   ];
   // Fonctions pour gérer le calendrier en prenant la date actuelle
   const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
