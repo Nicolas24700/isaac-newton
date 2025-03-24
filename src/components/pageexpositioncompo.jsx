@@ -28,8 +28,8 @@ export const Expopage = () => {
             <p>
                 <Trans i18nKey="expotext"></Trans>
             </p>
-            <a href="https://molduch.butmmi.o2switch.site/site_3D/" target='blank'><i className="fa-solid fa-gamepad"></i> {t('jouermtn')}</a>
+            <a href="https://expo3d.molduch.butmmi.o2switch.site/" target='blank'><i className="fa-solid fa-gamepad"></i> {t('jouermtn')}</a>
             <img src="./img/expo/illustrationVR.png" alt="" />
         </header>
     );
-}
+  };

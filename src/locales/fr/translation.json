@@ -112,6 +112,8 @@
         "tareservation" : "Votre réservation",
         "jourchoice" : "Jour sélectionné : ",
         "SOUS-TOTAL" : "SOUS-TOTAL"
-
-    }
+    },
+    "card3" : "La pendule de newton fait référence au célèbre bascule de Newton ou pendule de Newton , qui illustre la conservation de l'énergie et des mouvements oscillants. Bien que plus populaire comme un objet didactique moderne, il rappelle l'approfondissement des principes de la mécanique newtonienne, en particulier les lois du mouvement et de l'interaction des forces.",
+    "card2" : "Dans cette peinture, Isaac Newton expérimente avec un prisme pour explorer la nature de la lumière. En 1666, Newton prouve que la lumière blanche est composée de différentes couleurs en la faisant passer à travers un prisme. Cette expérience fonda sa théorie de la lumière et de la couleur, marquant un tournant dans la compréhension de l'optique.",
+    "card1" : "Isaac Newton a également conçu un télescope réflecteur en 1668, qui utilisait des miroirs pour éviter les aberrations chromatiques présentes dans les télescopes à lentilles de l'époque. Cet instrument, plus compact et performant, mesurait environ 15 centimètres de longueur avec un miroir primaire de 5 centimètres de diamètre. Il a grandement amélioré l'observation astronomique, ouvrant la voie à de nouvelles découvertes dans l'univers."
 }
