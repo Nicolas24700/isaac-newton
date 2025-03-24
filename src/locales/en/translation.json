@@ -117,8 +117,10 @@
         "tareservation" : "Your reservation",
         "jourchoice" : "Selected day : ",
         "SOUS-TOTAL" : "TOTAL"
-
-}
+},
+"card3" : "The Newton pendulum refers to Newton's famous seesaw or pendulum, which illustrates the conservation of energy and oscillating motion. Although more popular as a modern teaching aid, it serves as a reminder of the principles of Newtonian mechanics, in particular the laws of motion and the interaction of forces.",
+"card2" : "In this painting, Isaac Newton experiments with a prism to explore the nature of light. In 1666, Newton proved that white light is composed of different colors by passing it through a prism. This experiment founded his theory of light and color, marking a turning point in the understanding of optics.",
+"card1" : "Isaac Newton also designed a reflecting telescope in 1668, which used mirrors to avoid the chromatic aberrations present in the lens telescopes of the time. This more compact and powerful instrument measured around 15 centimetres in length, with a primary mirror 5 centimetres in diameter. It greatly improved astronomical observation, paving the way for new discoveries in the universe."
 
 
 }
