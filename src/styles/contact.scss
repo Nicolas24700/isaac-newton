@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('./img/accueil/fond_carton.jpg');
+    background-image: url('../img/accueil/fond_carton.jpg');
     padding-top: 5rem;
     .parentdesdivs {
         display: flex;
@@ -128,7 +128,7 @@
 // ====================================== MENTION LEGALES  ======================================
 .mentionlegales {
     padding-top: 5rem;
-    background-image: url('./img/accueil/fond_carton.jpg');
+    background-image: url('../img/accueil/fond_carton.jpg');
     height: auto;
     padding-bottom: 2rem;
     font-size: 1rem;
