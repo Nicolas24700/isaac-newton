@@ -7,6 +7,8 @@ import './styles/concept.scss'
 import './styles/expo.scss'
 import './styles/contact.scss'
 import './styles/reservation.scss'
+import './styles/signin.scss'
+import './styles/profile.scss'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

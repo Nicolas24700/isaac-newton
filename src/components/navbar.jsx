@@ -1,8 +1,13 @@
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from "react-router-dom";
+import Cookies from 'universal-cookie';
+
 export const Navbar = ({changeLanguage}) => {
     const location = useLocation();
     const { t } = useTranslation();
+    const cookies = new Cookies(null, { path: '/' });
+    const navigate = useNavigate();
 
     const toggleMenu = () => {
         const navUl = document.querySelector('nav ul');
@@ -10,6 +15,25 @@ export const Navbar = ({changeLanguage}) => {
         navUl.classList.toggle('show');
         langSwitch.classList.toggle('show');
     };
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        fetch('http://localhost:3000/api/auth.php', {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            credentials: 'include'
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            navigate('/home');
+            console.log(data);
+        })            
+        .catch((err) => {
+            console.log(err)
+          })
+    }
 
     return (
         <nav>
@@ -28,6 +52,13 @@ export const Navbar = ({changeLanguage}) => {
                 <li><a href="/exposition" className={location.pathname === '/exposition' ? 'active' : ''} >{t('Exposition')}</a></li>
                 <li><a href="/reservation" className={location.pathname === '/reservation' ? 'active' : ''} >{t('Réservation')}</a></li>
                 <li><a href="/contact" className={location.pathname === '/contact' ? 'active' : ''} >Contact</a></li>
+                {typeof cookies.get("account_id") !== 'undefined' ? 
+                (<>
+                    <li><a href="/profile" className={location.pathname === '/profile' ? 'active' : ''}>Profile</a></li>
+                    <li><a href="" onClick={handleClick}>Sign out</a></li>
+                </>
+                ) : <li><a href="/signin" className={location.pathname === '/signin' ? 'active' : ''}>Sign in</a></li>
+                }
             </ul>
             <div className="lang-switch">
                 <button onClick={() => changeLanguage('fr')}>

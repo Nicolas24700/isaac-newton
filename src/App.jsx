@@ -9,6 +9,8 @@ import Expo from './pages/expo'
 import Reservation from './pages/reservation'
 import Contact from './pages/contact'
 import Mentionlegales from './pages/mentions'
+import Signin from './pages/signin'
+import Profile from './pages/profile';
 
 import { Navbar } from './components/navbar'
 
@@ -23,6 +25,7 @@ function App() {
     i18n.changeLanguage(lang);
     localStorage.setItem('language', lang); // Sauvegarde la langue choisie dans le localStorage
   };
+
   return (
     <>
         <Router>
@@ -35,6 +38,8 @@ function App() {
         <Route path="/reservation" element={<Reservation />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentionslegales" element={<Mentionlegales />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
     </>

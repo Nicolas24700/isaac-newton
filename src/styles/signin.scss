@@ -1,0 +1,58 @@
+@import 'index';
+
+.signin-container {
+    min-height: 100vh;
+    background-color: black;
+    padding-top: 5%;
+
+    @include center-flex(y);
+
+    flex-direction: column;
+
+    h1 {
+        color: white;
+        text-transform: uppercase;
+    }
+}
+
+.signin {
+    @include center-flex(x);
+
+    margin-bottom: 4%;
+}
+
+.login, .signup {
+    min-width: 400px;
+    margin: 0 16px;
+    display: table;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+
+    fieldset {
+        border: none;
+        label {
+            display: table-cell;
+        }
+        input {
+            display: table-cell;
+            width: 100%;
+            height: 32px;
+        }
+    }
+
+    .button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 8px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+
