@@ -30,7 +30,7 @@ export const Affichesection = () => {
         <section className="section4">
             <div>
                 <div className="affiche-gauche">
-                    <img src="./img/accueil/affiche_newton.png" alt="affiche-gauche" />
+                    <img src="./img/accueil/affiche_newton.jpeg" alt="affiche-gauche" />
                 </div>
                 <div className='gauche-textanim'>
                     <h4>{t('h4affiche')}</h4>

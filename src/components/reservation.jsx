@@ -180,7 +180,7 @@ if (typeof cookies.get("account_id") !== 'undefined') {
                         <div className='divpanier'>
                             <h2>{t('ReserForm.panier')}</h2>
                             <div className='divpetiteaffiche'>
-                                <img src="./img/accueil/affiche_newton.png" alt="" />
+                                <img src="./img/accueil/affiche_newton.jpeg" alt="" />
                                 <p>GRAVILIGHT</p>
                             </div>
                             <p>{t('ReserForm.panierinfo1')}</p>
