@@ -31,7 +31,7 @@ switch ($request_method) {
         $result = $accountManager->verifyLogin($_POST["login"], $_POST["password"]);
 
         if ($result['status'] == 1) {
-            setcookie('account_id', $result['account_id'], ['expires' => time()+3600, 'path' => "/", 'secure' => true, 'httponly' => true, 'samesite' => 'Strict']);
+            setcookie('account_id', $result['account_id'], ['expires' => time()+3600, 'path' => "/", 'secure' => true, 'httponly' => false, 'samesite' => 'Strict']);
             $response = array(
                 'status' => 1,
                 'status_message' => 'Logged in successfully.',
