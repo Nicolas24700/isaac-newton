@@ -36,7 +36,7 @@ export const Reservationcompo = () => {
     const [summaryData, setSummaryData] = useState({
         selectedDate: null,
         selectedTime: null,
-        quantities: { adulte: 0, jeune: 0, enfant: 0 },
+        quantities: { adulte: 0, etudiant: 0, enfant: 0 },
         prix: []
     });
     const [formData, setFormData] = useState({
@@ -47,6 +47,29 @@ export const Reservationcompo = () => {
 
     // État pour afficher le message de confirmation
 const [successMessage, setSuccessMessage] = useState('');
+
+if (typeof cookies.get("account_id") !== 'undefined') {
+    useEffect(() => {
+        fetch(`https://isaac-newton.alwaysdata.net/api/accounts/${cookies.get('account_id')}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            credentials: 'include'
+        })
+        .then((res) => res.json())
+        .then(data => {
+            setFormData({
+                first_name: data.first_name,
+                last_name: data.last_name,
+                email: data.email
+            })
+        })            
+        .catch((err) => {
+            console.log(err);
+          })
+    },[]);
+}
 
 
 // fonction qui gere la confirmation de la réservation
@@ -81,12 +104,12 @@ const [successMessage, setSuccessMessage] = useState('');
         }
         reservationDetails.append("date", formatDateISO(summaryData.selectedDate));
         reservationDetails.append("time_slot", summaryData.selectedTime);
-        reservationDetails.append("tickets[1]", summaryData.quantities.jeune)
+        reservationDetails.append("tickets[1]", summaryData.quantities.etudiant)
         reservationDetails.append("tickets[2]", summaryData.quantities.enfant)
         reservationDetails.append("tickets[3]", summaryData.quantities.adulte)
 
         // Requete API pour inserer une reservation
-        fetch('http://localhost:3000/api/reservations.php', {
+        fetch('https://isaac-newton.alwaysdata.net/api/reservations', {
             method: "POST",
             credentials: 'include',
             body: reservationDetails
@@ -118,7 +141,7 @@ const [successMessage, setSuccessMessage] = useState('');
         setSummaryData({
             selectedDate: null,
             selectedTime: null,
-            quantities: { adulte: 0, jeune: 0, enfant: 0 },
+            quantities: { adulte: 0, etudiant: 0, enfant: 0 },
             prix: []
         });
         setFormData({

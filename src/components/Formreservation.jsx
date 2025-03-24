@@ -7,7 +7,7 @@ export const FormReservationTicket = ({ setShowSummary, setSummaryData }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
-  const [quantities, setQuantities] = useState({ adulte: 0, jeune: 0, enfant: 0 });
+  const [quantities, setQuantities] = useState({ adulte: 0, etudiant: 0, enfant: 0 });
 
   const maxReservations = 10;
 
@@ -18,7 +18,7 @@ export const FormReservationTicket = ({ setShowSummary, setSummaryData }) => {
   // tableau des tarifs
   const prix = [
     { id: "adulte", label: t('ReserForm.Adulte'),labeldetail: `(> 26 ${t('ReserForm.ans')})`, price: 10 },
-    { id: "jeune", label: t('ReserForm.JeuneAdulte'),labeldetail: `(18 - 25 ${t('ReserForm.ans')})`, price: 5 },
+    { id: "etudiant", label: t('ReserForm.Etudiant'),labeldetail: `(18 - 25 ${t('ReserForm.ans')})`, price: 5 },
     { id: "enfant", label: t('ReserForm.Enfant'),labeldetail: `(< 18  ${t('ReserForm.ans')})`, price: 0 }
   ];
   // Fonctions pour gérer le calendrier en prenant la date actuelle
@@ -63,7 +63,7 @@ export const FormReservationTicket = ({ setShowSummary, setSummaryData }) => {
   const resetForm = () => {
     setSelectedDate(null);
     setSelectedTime(null);
-    setQuantities({ adulte: 0, jeune: 0, enfant: 0 });
+    setQuantities({ adulte: 0, etudiant: 0, enfant: 0 });
     setShowSummary(false);
   };
 
