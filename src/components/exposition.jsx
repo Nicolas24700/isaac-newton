@@ -59,11 +59,15 @@ export const Exposition = () => {
         <div className="allcards">
           <div className="cards-horizontale">
             <div className="cards1">
-              <img src="./img/accueil/letelescope.jpg" alt="Le Telescope" />
-              <div className="cards3-text">
-                <p>{t('letelescope')}</p>
-              </div>
+                <img src="./img/accueil/letelescope.jpg" alt="Le Telescope" />
+                <div className="cards3-text">
+                  <p>{t('letelescope')}</p>
+                </div>
+                <div className="hover-text">
+              <p>{t('card1')}</p>
             </div>
+            </div>
+
           </div>
           <div className="cards-verticale">
             <div className="Cards2">
@@ -71,12 +75,20 @@ export const Exposition = () => {
               <div className="cards1-text">
                 <p>{t('prisme')}</p>
               </div>
+              <div className="hover-text">
+              <p>{t('card2')}</p>
+            </div>
             </div>
             <div className="Cards3">
               <img src="./img/accueil/pendule_newton.jpg" alt="Le pendule d'issac newton" />
               <div className="cards1-text">
                 <p>{t('pendulenewton')}</p>
               </div>
+
+              <div className="hover-text">
+              <p>{t('card3')}</p>
+            </div>
+
             </div>
           </div>
         </div>
