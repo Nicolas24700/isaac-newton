@@ -75,7 +75,7 @@ nav {
 /* =========== HEADER ========== */
 .header-accueil {
   height: 100vh;
-  background: url("./img/accueil/Fond_Header.jpg") no-repeat center center/cover;
+  background: url("../img/accueil/Fond_Header.jpg") no-repeat center center/cover;
   display: flex;
   justify-content: center;
 
@@ -461,11 +461,11 @@ nav {
   }
 
   .offre-etudiante {
-    background: url("./img/accueil/offre_etudiant.jpg") center/cover no-repeat;
+    background: url("../img/accueil/offre_etudiant.jpg") center/cover no-repeat;
   }
 
   .offre-famille {
-    background: url("./img/accueil/offre_famille.jpg") center/cover no-repeat;
+    background: url("../img/accueil/offre_famille.jpg") center/cover no-repeat;
   }
   .doigt-gauche {
     position: absolute;

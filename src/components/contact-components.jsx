@@ -63,7 +63,7 @@ export const ContactComposents = () => {
                     <p><i className="fa-solid fa-location-dot"></i>2 rue Albert Einstein, 77420 Champs-sur-Marne</p>
                     <p><i className="fa-solid fa-phone"></i> +33 6 00 00 00 00</p>
                     <p><i className="fa-solid fa-envelope"></i> Wavycom@gmail.com</p>
-                    <p><i className="fa-solid fa-globe"></i> <a href="">Wavycom.fr</a></p>
+                    <p><i className="fa-solid fa-globe"></i> <a href="https://wavycom.missie.butmmi.o2switch.site/">Wavycom.fr</a></p>
                 </div>
                 <div className='div-gauche-reseaux'>
                     <p>{t('contactreseau')}</p>
