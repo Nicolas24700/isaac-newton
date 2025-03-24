@@ -1,7 +1,8 @@
 @import 'index';
 
 .profile-container {
-    padding-top: 5%;
+    padding-top: 8%;
+    height: 100vh;
 
     h1 {
         text-align: center;
@@ -16,12 +17,17 @@
     padding: 20px;
     text-align: center;
 
+    h2 {
+        text-align: left;
+    }
+
     .profile-row {
-        @include center-flex(x);
+        @include center-flex(y);
     }
 
     fieldset {
-        width: 40%;
+        margin: 8px 12px;
+        width: 100%;
         border: none;
         label {
             display: table-cell;

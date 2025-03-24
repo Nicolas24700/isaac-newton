@@ -18,7 +18,7 @@ export const Navbar = ({changeLanguage}) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3000/api/auth.php', {
+        fetch('https://isaac-newton.alwaysdata.net/api/auth', {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -54,10 +54,10 @@ export const Navbar = ({changeLanguage}) => {
                 <li><a href="/contact" className={location.pathname === '/contact' ? 'active' : ''} >Contact</a></li>
                 {typeof cookies.get("account_id") !== 'undefined' ? 
                 (<>
-                    <li><a href="/profile" className={location.pathname === '/profile' ? 'active' : ''}>Profile</a></li>
+                    <li><a href="/profile" className={location.pathname === '/profile' ? 'active' : ''}>{t('profil')}</a></li>
                     <li><a href="" onClick={handleClick}>Sign out</a></li>
                 </>
-                ) : <li><a href="/signin" className={location.pathname === '/signin' ? 'active' : ''}>Sign in</a></li>
+                ) : <li><a href="/signin" className={location.pathname === '/signin' ? 'active' : ''}>{t('connexion')}</a></li>
                 }
             </ul>
             <div className="lang-switch">
