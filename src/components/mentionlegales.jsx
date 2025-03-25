@@ -31,9 +31,9 @@ export const Mentioncompo = () => {
                     <li>
                         <p><strong>{t('hebergement')}</strong></p>
                         <ul>
-                            <li>{t('hebergementdetail.hebergeur')}Le site est hébergé par : alwaysdata.net</li>
-                            <li>{t('hebergementdetail.adresse')}Adresse : 91 Rue du Faubourg Saint-Honoré, 75008 Paris, France</li>
-                            <li>{t('hebergementdetail.tel')}Téléphone : +33 1 84 16 23 40</li>
+                            <li>{t('hebergementdetail.hebergeur')}</li>
+                            <li>{t('hebergementdetail.adresse')}</li>
+                            <li>{t('hebergementdetail.tel')}</li>
                             <li>{t('hebergementdetail.siteweb')}<a target='blank' href="https://www.alwaysdata.com">https://www.alwaysdata.com</a></li>
                         </ul>
                     </li>
