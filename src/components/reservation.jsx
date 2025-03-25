@@ -17,7 +17,7 @@ export const Reservationcompo = () => {
             { y: 500 }, 
             { y: 0, duration: 1.5, scrollTrigger: {
                 trigger: '.reservationsection',
-                toggleActions: 'play none none reset'
+                toggleActions: 'play none none  reset'
             }}
         );
         gsap.fromTo('.divdeh1', 
